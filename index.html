@@ -16,7 +16,9 @@
     /* Global Variables */
     :root {
       --primary-color: #8a56b5;
+      --primary-color-light: #a174c4;
       --secondary-color: #eee6f3;
+      --secondary-color-light: #f6f1fa;
       --text-color: #333;
       --light-text: #666;
       --dark-bg: #3a2347;
@@ -25,6 +27,7 @@
       --transition: all 0.3s ease;
       --border-radius: 4px;
       --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      --mobile-padding: 15px;
     }
 
     /* Base Styles */
@@ -195,11 +198,18 @@
       position: absolute;
       top: 20px;
       right: 20px;
-      background: none;
+      background: var(--primary-color);
+      color: white;
       border: none;
-      font-size: 1.2rem;
-      color: var(--text-color);
+      font-size: 1.3rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
     .mobile-menu-links {
@@ -340,10 +350,11 @@
       justify-content: center;
       text-align: center;
       position: relative;
-      background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('hero-bg.jpg') center/cover no-repeat;
+      background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.85)), url('hero-bg.jpg') center/cover no-repeat;
       background-color: rgba(138, 86, 181, 0.05);
       margin-top: 0;
       padding-top: 80px;
+      overflow: hidden; /* Ensure circles don't cause horizontal scrolling */
     }
 
     .hero-content {
@@ -593,45 +604,6 @@
 
     .workshop-card-content ul {
       margin-bottom: 20px;
-    }
-
-    /* Certifications Section */
-    .certification-container {
-      width: 100%;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .certification-logos {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 30px;
-    }
-
-    .certification-logo {
-      background-color: white;
-      border-radius: var(--border-radius);
-      overflow: hidden;
-      box-shadow: var(--box-shadow);
-      transition: var(--transition);
-      border: 1px solid #f0f0f0;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 150px;
-    }
-
-    .certification-logo:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-      border-color: var(--primary-color);
-    }
-
-    .certification-logo img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
     }
 
     /* FAQ Section */
@@ -1026,7 +998,7 @@
       right: 10%;
     }
 
-    /* Media Queries */
+    /* Media Queries - Improved Responsiveness */
     @media (max-width: 1024px) {
       .hero-title {
         font-size: 3rem;
@@ -1036,8 +1008,13 @@
         grid-template-columns: 1fr 1fr;
         gap: 40px;
       }
+      
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
+    /* Tablet Styles */
     @media (max-width: 768px) {
       html {
         font-size: 15px;
@@ -1053,6 +1030,8 @@
       
       .mobile-menu-btn {
         display: block;
+        padding: 10px;
+        font-size: 1.5rem;
       }
       
       .about-container {
@@ -1074,37 +1053,407 @@
       .hero-title {
         font-size: 2.5rem;
       }
+      
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .testimonial-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      /* Adjust logo size for mobile */
+      .logo img {
+        width: 180px;
+      }
+      
+      /* Better spacing for mobile forms */
+      .form-group {
+        margin-bottom: 18px;
+      }
+      
+      .form-group input, 
+      .form-group select, 
+      .form-group textarea {
+        padding: 14px;
+        font-size: 16px; /* Prevents zoom on iOS */
+        border-radius: 8px;
+      }
+      
+      /* Improve mobile tap targets */
+      .btn, .nav-link, .mobile-menu-links a {
+        padding: 14px 22px;
+      }
+      
+      .mobile-menu-links a {
+        font-size: 18px;
+        padding: 18px 0;
+        margin-bottom: 10px;
+        border-bottom: 1px solid var(--secondary-color);
+        font-weight: 500;
+      }
+      
+      /* Improve mobile menu */
+      .mobile-menu {
+        width: 85%;
+        padding: 60px 25px;
+        background: linear-gradient(to bottom, white, var(--secondary-color-light));
+        border-left: 3px solid var(--primary-color);
+      }
+      
+      /* More space between service cards on mobile */
+      .service-card {
+        margin-bottom: 20px;
+      }
+      
+      /* Improve hero section for mobile */
+      .hero-content {
+        padding: 0 15px;
+        margin-top: -20px;
+      }
+      
+      .hero-description p {
+        margin-bottom: 25px;
+        font-size: 16px;
+        line-height: 1.7;
+      }
+      
+      .hero-cta {
+        padding: 16px 30px;
+        font-size: 16px;
+      }
     }
 
+    /* Mobile Phone Styles */
     @media (max-width: 480px) {
       html {
         font-size: 14px;
       }
+      
+      body {
+        overflow-x: hidden;
+      }
+
+      .container {
+        width: 95%;
+        padding: 0 var(--mobile-padding);
+      }
+      
+      .section {
+        padding: 40px 0;
+      }
 
       .hero-title {
         font-size: 2.2rem;
+        margin-bottom: 12px;
       }
       
       .hero-subtitle {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
       }
       
       .section-header h2 {
-        font-size: 2rem;
+        font-size: 1.9rem;
+        margin-bottom: 15px;
+      }
+      
+      .section-header p {
+        font-size: 16px;
+        line-height: 1.7;
+        padding: 0 5px;
+      }
+      
+      /* Improve newsletter form */
+      .newsletter {
+        padding: 50px 0;
+      }
+      
+      .newsletter h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+      
+      .newsletter p {
+        margin-bottom: 25px;
+        padding: 0 10px;
       }
       
       .newsletter-form {
         flex-direction: column;
+        width: 100%;
       }
       
       .newsletter-form input {
-        border-radius: var(--border-radius);
-        margin-bottom: 10px;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        padding: 16px;
+        width: 100%;
+        font-size: 16px;
       }
       
       .newsletter-form button {
-        border-radius: var(--border-radius);
-        padding: 12px;
+        border-radius: 8px;
+        padding: 16px;
+        width: 100%;
+        background-color: var(--dark-bg);
+        font-size: 16px;
+        font-weight: 600;
+      }
+      
+      /* Make buttons more prominent and attractive on mobile */
+      .btn {
+        display: block;
+        width: 100%;
+        padding: 16px;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 8px;
+        background: linear-gradient(to right, var(--primary-color), var(--primary-color-light));
+        box-shadow: 0 4px 10px rgba(138, 86, 181, 0.3);
+      }
+      
+      /* Enhance service cards for mobile */
+      .service-card, 
+      .testimonial-card, 
+      .workshop-card {
+        padding: 0;
+        margin-bottom: 25px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        border: none;
+      }
+      
+      .service-card-content, 
+      .workshop-card-content {
+        padding: 20px;
+      }
+      
+      .service-card-content h3,
+      .workshop-card-content h3 {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+      }
+      
+      .service-price {
+        font-weight: 600;
+        font-size: 1rem;
+        margin-bottom: 18px;
+      }
+      
+      .service-feature {
+        margin-bottom: 15px;
+      }
+      
+      .service-feature i {
+        color: var(--primary-color);
+        font-size: 1rem;
+      }
+      
+      .service-feature span {
+        font-size: 15px;
+      }
+      
+      /* Improve testimonials for mobile */
+      .testimonial-card {
+        padding: 25px 20px;
+      }
+      
+      .testimonial-text {
+        font-size: 16px;
+        line-height: 1.7;
+      }
+      
+      /* Improve readability of all text on mobile */
+      p {
+        font-size: 16px;
+        line-height: 1.7;
+      }
+      
+      /* Adjust spacing and sizing for hero section on mobile */
+      .hero {
+        min-height: 520px;
+        padding-top: 80px;
+        height: auto;
+        padding-bottom: 50px;
+      }
+      
+      .hero-content {
+        padding: 0 15px;
+      }
+      
+      .hero-description p {
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 25px;
+        padding: 0 5px;
+      }
+      
+      .hero-cta {
+        padding: 16px 30px;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 8px;
+        background: linear-gradient(to right, var(--primary-color), var(--primary-color-light));
+        box-shadow: 0 4px 10px rgba(138, 86, 181, 0.3);
+      }
+      
+      /* Enhance accordion on mobile */
+      .accordion-item {
+        margin-bottom: 15px;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      }
+      
+      .accordion-header {
+        padding: 18px 15px;
+      }
+      
+      .accordion-header h3 {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        padding-right: 10px;
+      }
+      
+      .accordion-content-inner {
+        padding: 0 15px 20px;
+      }
+      
+      .accordion-content-inner p {
+        font-size: 15px;
+      }
+      
+      /* Enhance form elements */
+      .form-group label {
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
+      
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        font-size: 16px;
+        padding: 15px;
+        border-radius: 8px;
+        background-color: var(--secondary-color-light);
+      }
+      
+      /* Improve booking section */
+      .booking-info li {
+        margin-bottom: 16px;
+      }
+      
+      .pricing-box {
+        padding: 22px 18px;
+        margin-top: 25px;
+        border-radius: 10px;
+      }
+      
+      .pricing-box h4 {
+        font-size: 1.2rem;
+      }
+      
+      .pricing-item {
+        padding: 12px 0;
+        font-size: 15px;
+      }
+      
+      /* Improve footer spacing on mobile */
+      footer {
+        padding: 40px 0 0;
+      }
+      
+      .footer-container {
+        gap: 25px;
+      }
+      
+      .footer-about h3 {
+        font-size: 1.4rem;
+      }
+       
+      .footer-about p {
+        font-size: 15px;
+      }
+      
+      .footer-links h4 {
+        font-size: 1.1rem;
+      }
+      
+      .footer-links a {
+        font-size: 15px;
+      }
+      
+      .footer-bottom {
+        padding: 25px 0;
+      }
+    }
+    
+    /* Touchscreen-specific enhancements */
+    @media (hover: none) {
+      /* Increase touch targets for better mobile usability */
+      .btn, 
+      .client-portal, 
+      .nav-link, 
+      .footer-links a,
+      .accordion-header,
+      .mobile-menu-links a {
+        padding: 15px 20px;
+      }
+      
+      /* Remove hover effects that don't work well on touch devices */
+      .service-card:hover,
+      .testimonial-card:hover,
+      .workshop-card:hover,
+      .about-image:hover img,
+      .social-link:hover,
+      .nav-link:hover::after {
+        transform: none;
+      }
+      
+      /* Enhance active states for touch */
+      .btn:active, 
+      .client-portal:active,
+      .hero-cta:active {
+        transform: scale(0.97);
+        opacity: 0.9;
+      }
+      
+      /* Make scroll-to-top button larger and more visible on touch devices */
+      .scroll-top {
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 1.5rem;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+      }
+      
+      /* Enhance mobile menu button */
+      .mobile-menu-btn, 
+      .mobile-menu-close {
+        padding: 15px;
+        font-size: 1.5rem;
+        touch-action: manipulation;
+      }
+      
+      /* Add active state to accordion */
+      .accordion-header:active {
+        background-color: var(--secondary-color-light);
+      }
+      
+      /* Make form inputs easier to tap */
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        min-height: 48px;
+      }
+      
+      /* Ensure buttons have minimum touch size */
+      button, 
+      .btn, 
+      input[type="submit"] {
+        min-height: 48px;
+        min-width: 48px;
       }
     }
   </style>
@@ -1124,8 +1473,6 @@
       <a href="#services">Services</a>
       <a href="#testimonials">Testimonials</a>
       <a href="#workshops">Workshops</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#shop">Shop</a>
       <a href="#faq">FAQ</a>
       <a href="#booking">Book Now</a>
       <a href="#contact">Contact</a>
@@ -1146,7 +1493,6 @@
           <a href="#about" class="nav-link">About</a>
           <a href="#services" class="nav-link">Services</a>
           <a href="#testimonials" class="nav-link">Testimonials</a>
-          <a href="#certifications" class="nav-link">Certifications</a>
           <a href="#contact" class="nav-link">Contact</a>
         </div>
         <a href="#booking" class="client-portal">Book Now</a>
@@ -1493,23 +1839,6 @@
       </div>
     </div>
   </section>
-  
-  <!-- Certifications Section -->
-  <section id="certifications" class="certifications section">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <h2>Certified and Trained By</h2>
-        <p>Professional certifications and specialized training that enhance the quality of services provided.</p>
-      </div>
-      <div class="certification-container">
-        <div class="certification-logos" data-aos="fade-up">
-          <div class="certification-logo">
-            <img src="IIRP_Logo_Blue.png" alt="Professional Certification" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- FAQ Section -->
   <section id="faq" class="faq section">
@@ -1746,7 +2075,6 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#workshops">Workshops</a></li>
-            <li><a href="#certifications">Certifications</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
