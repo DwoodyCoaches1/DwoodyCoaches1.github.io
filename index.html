@@ -11,12 +11,12 @@
   <!-- Ultra Simple Chat - No JavaScript Dependencies -->
   <script src="https://lib.youware.com/youware-lib.1747145198.js" id="yourware-lib"></script><script src="https://lib.youware.com/youware-lib.1747145198.js" id="yourware-lib"></script></head><body><div id="static-chat" style="position:fixed; bottom:20px; right:20px; z-index:1000; font-family:Arial,sans-serif;">
     <!-- Main Chat Button -->
-    <button id="static-chat-btn" style="background-color:#8a56b5; color:white; border:none; border-radius:5px; padding:12px 20px; font-size:16px; cursor:pointer; box-shadow:0 4px 8px rgba(0,0,0,0.2);" onclick="document.getElementById('static-chat-popup').style.display='block';">
+    <button id="static-chat-btn" style="background-color:#8a56b5; color:white; border:none; border-radius:8px; padding:14px 20px; font-size:16px; cursor:pointer; box-shadow:0 4px 8px rgba(0,0,0,0.2); min-width:140px; min-height:44px;" onclick="document.getElementById('static-chat-popup').style.display='block';">
       Chat with us
     </button>
     
     <!-- Chat Popup -->
-    <div id="static-chat-popup" style="display:none; position:absolute; bottom:60px; right:0; width:300px; background:white; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.2); border:1px solid #ddd; overflow:hidden;">
+    <div id="static-chat-popup" style="display:none; position:absolute; bottom:60px; right:0; width:300px; max-width:85vw; background:white; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.2); border:1px solid #ddd; overflow:hidden;">
       <!-- Header -->
       <div style="background-color:#8a56b5; color:white; padding:12px; display:flex; justify-content:space-between; align-items:center;">
         <span style="font-weight:bold;">Evolve Chat Assistant</span>
@@ -24,34 +24,34 @@
       </div>
       
       <!-- Messages Container -->
-      <div id="static-chat-msgs" style="padding:15px; height:250px; overflow-y:auto; background-color:#f9f9f9;">
+      <div id="static-chat-msgs" style="padding:15px; height:250px; overflow-y:auto; background-color:#f9f9f9; -webkit-overflow-scrolling:touch;">
         <div style="background-color:#f0f0f0; padding:10px; margin-bottom:10px; border-radius:10px; max-width:80%;">
           Hi there! How can I help you today?
         </div>
       </div>
       
       <!-- Simple FAQ Buttons Instead of Input -->
-      <div style="padding:15px; border-top:1px solid #ddd; background-color:white; overflow-y:auto; max-height:200px;">
-        <p style="margin:0 0 10px 0; color:#666; font-size:14px;">Click a question:</p>
-        <button onclick="addStaticMessage('What services do you offer?', 'We offer Individual, Relationship, Life Transitions, Leadership, and Pre-Marital Coaching.')" style="width:100%; margin-bottom:8px; padding:8px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:5px; cursor:pointer; text-align:left;">
+      <div style="padding:15px; border-top:1px solid #ddd; background-color:white; overflow-y:auto; max-height:200px; -webkit-overflow-scrolling:touch;">
+        <p style="margin:0 0 10px 0; color:#666; font-size:16px;">Click a question:</p>
+        <button onclick="addStaticMessage('What services do you offer?', 'We offer Individual, Relationship, Life Transitions, Leadership, and Pre-Marital Coaching.')" style="width:100%; margin-bottom:10px; padding:12px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:8px; cursor:pointer; text-align:left; min-height:44px; font-size:15px;">
           What services do you offer?
         </button>
-        <button onclick="addStaticMessage('What are your prices?', 'Our coaching sessions range from $30 for a consultation to $450 for a package.')" style="width:100%; margin-bottom:8px; padding:8px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:5px; cursor:pointer; text-align:left;">
+        <button onclick="addStaticMessage('What are your prices?', 'Our coaching sessions range from $30 for a consultation to $450 for a package.')" style="width:100%; margin-bottom:10px; padding:12px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:8px; cursor:pointer; text-align:left; min-height:44px; font-size:15px;">
           What are your prices?
         </button>
-        <button onclick="addStaticMessage('Are payment plans offered?', 'Yes! At Evolve | Connection Coaching, I want coaching to be accessible and sustainable. Flexible payment plans are available for most coaching packages. Let\'s discuss a plan that works for you during your free consultation.')" style="width:100%; margin-bottom:8px; padding:8px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:5px; cursor:pointer; text-align:left;">
+        <button onclick="addStaticMessage('Are payment plans offered?', 'Yes! At Evolve | Connection Coaching, I want coaching to be accessible and sustainable. Flexible payment plans are available for most coaching packages. Let\'s discuss a plan that works for you during your free consultation.')" style="width:100%; margin-bottom:10px; padding:12px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:8px; cursor:pointer; text-align:left; min-height:44px; font-size:15px;">
           Are payment plans offered?
         </button>
-        <button onclick="addStaticMessage('Is sliding scale or equity-based pricing offered?', 'I believe in equity and accessibility. A limited number of sliding scale slots may be available each quarter for those with financial need. If cost is a barrier, please reach out—we\'re happy to explore options together.')" style="width:100%; margin-bottom:8px; padding:8px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:5px; cursor:pointer; text-align:left;">
+        <button onclick="addStaticMessage('Is sliding scale or equity-based pricing offered?', 'I believe in equity and accessibility. A limited number of sliding scale slots may be available each quarter for those with financial need. If cost is a barrier, please reach out—we\'re happy to explore options together.')" style="width:100%; margin-bottom:10px; padding:12px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:8px; cursor:pointer; text-align:left; min-height:44px; font-size:15px;">
           Is sliding scale pricing offered?
         </button>
-        <button onclick="addStaticMessage('Is insurance accepted?', 'Coaching is not a medical or clinical service, so insurance does not cover it. However, coaching is often an empowering complement to therapy and personal development work. We\'re happy to help you find the right balance of support that fits your needs.')" style="width:100%; margin-bottom:8px; padding:8px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:5px; cursor:pointer; text-align:left;">
+        <button onclick="addStaticMessage('Is insurance accepted?', 'Coaching is not a medical or clinical service, so insurance does not cover it. However, coaching is often an empowering complement to therapy and personal development work. We\'re happy to help you find the right balance of support that fits your needs.')" style="width:100%; margin-bottom:10px; padding:12px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:8px; cursor:pointer; text-align:left; min-height:44px; font-size:15px;">
           Is insurance accepted?
         </button>
-        <button onclick="addStaticMessage('What is your cancellation policy?', 'We ask for at least 24 hours\' notice if you need to cancel or reschedule a session. If a session is canceled with less than 24 hours\' notice, a 50% fee may apply. No-shows or same-day cancellations may be charged the full session fee.')" style="width:100%; margin-bottom:8px; padding:8px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:5px; cursor:pointer; text-align:left;">
+        <button onclick="addStaticMessage('What is your cancellation policy?', 'We ask for at least 24 hours\' notice if you need to cancel or reschedule a session. If a session is canceled with less than 24 hours\' notice, a 50% fee may apply. No-shows or same-day cancellations may be charged the full session fee.')" style="width:100%; margin-bottom:10px; padding:12px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:8px; cursor:pointer; text-align:left; min-height:44px; font-size:15px;">
           What is your cancellation policy?
         </button>
-        <button onclick="addStaticMessage('How can I contact you?', 'You can reach us at evolveconnectioncoaching@gmail.com.')" style="width:100%; margin-bottom:8px; padding:8px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:5px; cursor:pointer; text-align:left;">
+        <button onclick="addStaticMessage('How can I contact you?', 'You can reach us at evolveconnectioncoaching@gmail.com.')" style="width:100%; margin-bottom:10px; padding:12px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:8px; cursor:pointer; text-align:left; min-height:44px; font-size:15px;">
           How can I contact you?
         </button>
       </div>
@@ -478,19 +478,25 @@
     
     #user-input {
       flex: 1;
-      padding: 10px;
+      padding: 12px 15px;
       border: 1px solid #ddd;
-      border-radius: 5px;
+      border-radius: 8px;
       margin-right: 5px;
+      font-size: 16px;
+      -webkit-appearance: none;
+      appearance: none;
     }
     
     #send-btn {
       background-color: #8a56b5;
       color: white;
       border: none;
-      border-radius: 5px;
-      padding: 10px 15px;
+      border-radius: 8px;
+      padding: 12px 18px;
       cursor: pointer;
+      min-width: 80px;
+      min-height: 44px;
+      font-size: 16px;
     }
   </style>
   <script>
@@ -518,23 +524,15 @@
         paypalContainer.style.display = 'none';
       }
       
-      // Show/hide payment fields based on payment method
+      // Show/hide PayPal email field based on payment method
       if (paymentMethodSelect) {
         paymentMethodSelect.addEventListener('change', function() {
           const paypalEmailField = document.getElementById('paypal-email-field');
-          const paymentUsernameField = document.getElementById('payment-username-field');
-          const paymentUsernameLabel = document.getElementById('payment-username-label');
           
-          // Hide all payment-specific fields first
-          if (paypalEmailField) paypalEmailField.style.display = 'none';
-          if (paymentUsernameField) paymentUsernameField.style.display = 'none';
-          
-          // Show relevant fields based on payment method
           if (this.value === 'paypal' && paypalEmailField) {
             paypalEmailField.style.display = 'block';
-          } else if ((this.value === 'cashapp' || this.value === 'venmo') && paymentUsernameField) {
-            paymentUsernameField.style.display = 'block';
-            paymentUsernameLabel.textContent = 'Your ' + (this.value === 'cashapp' ? 'CashApp' : 'Venmo') + ' Username';
+          } else if (paypalEmailField) {
+            paypalEmailField.style.display = 'none';
           }
         });
       }
@@ -1714,9 +1712,11 @@
       .form-group input, 
       .form-group select, 
       .form-group textarea {
-        padding: 14px;
+        padding: 16px;
         font-size: 16px; /* Prevents zoom on iOS */
         border-radius: 8px;
+        -webkit-appearance: none; /* Removes default styling on iOS */
+        appearance: none;
       }
       
       /* Improve mobile tap targets */
@@ -1771,6 +1771,7 @@
       
       body {
         overflow-x: hidden;
+        -webkit-text-size-adjust: 100%; /* Prevent text size adjustment on orientation change */
       }
 
       .header {
@@ -1787,6 +1788,7 @@
       .hero {
         padding-top: 110px;
         margin-top: 30px;
+        min-height: 500px;
       }
       
       .section {
@@ -2415,74 +2417,6 @@
         document.querySelectorAll('.booking-tab')[1].classList.add('active');
       }
     }
-    
-    // Calendly payment verification
-    document.addEventListener('DOMContentLoaded', function() {
-      const verifyPaymentBtn = document.getElementById('verify-payment-btn');
-      const calendlyPaymentMethod = document.getElementById('calendly-payment-method');
-      const calendlyUsernameField = document.getElementById('calendly-payment-username-field');
-      const calendlyUsernameLabel = document.getElementById('calendly-payment-username-label');
-      
-      // Update label based on payment method
-      if (calendlyPaymentMethod) {
-        calendlyPaymentMethod.addEventListener('change', function() {
-          const paymentLabel = document.getElementById('payment-method-label');
-          if (paymentLabel) {
-            paymentLabel.textContent = 'Enter your ' + this.value + ' username';
-          }
-        });
-      }
-      
-      // Verify payment and show Calendly widget
-      if (verifyPaymentBtn) {
-        verifyPaymentBtn.addEventListener('click', function() {
-          const paymentMethod = document.getElementById('calendly-payment-method').value;
-          const paymentId = document.getElementById('calendly-payment-id').value;
-          const paymentUsername = document.getElementById('calendly-payment-username')?.value || '';
-          
-          if (!paymentMethod || !paymentId) {
-            alert('Please fill in all required payment details');
-            return;
-          }
-          
-          // Show success message and Calendly widget
-          document.getElementById('payment-verification-success').style.display = 'block';
-          document.getElementById('calendly-widget-container').style.display = 'block';
-          verifyPaymentBtn.disabled = true;
-          verifyPaymentBtn.textContent = 'Payment Verified';
-          verifyPaymentBtn.style.backgroundColor = '#4CAF50';
-          
-          // Store verification in session storage
-          sessionStorage.setItem('paymentVerified', 'true');
-          sessionStorage.setItem('paymentDetails', JSON.stringify({
-            method: paymentMethod,
-            id: paymentId,
-            username: paymentUsername
-          }));
-        });
-      }
-      
-      // Check if payment was already verified
-      if (sessionStorage.getItem('paymentVerified') === 'true') {
-        document.getElementById('payment-verification-success').style.display = 'block';
-        document.getElementById('calendly-widget-container').style.display = 'block';
-        if (verifyPaymentBtn) {
-          verifyPaymentBtn.disabled = true;
-          verifyPaymentBtn.textContent = 'Payment Verified';
-          verifyPaymentBtn.style.backgroundColor = '#4CAF50';
-        }
-        
-        // Restore saved payment method and update the label
-        const savedPaymentDetails = JSON.parse(sessionStorage.getItem('paymentDetails') || '{}');
-        if (savedPaymentDetails.method && calendlyPaymentMethod) {
-          calendlyPaymentMethod.value = savedPaymentDetails.method;
-          const paymentLabel = document.getElementById('payment-method-label');
-          if (paymentLabel) {
-            paymentLabel.textContent = 'Enter your ' + savedPaymentDetails.method + ' username';
-          }
-        }
-      }
-    });
   </script>
   
   <!-- Smart Chat Widget Script -->
@@ -3232,92 +3166,23 @@
                 <select id="payment-method" name="payment-method" required="">
                   <option value="" selected="" disabled="">Select Payment Method</option>
                   <option value="paypal">PayPal</option>
-                  <option value="cashapp">CashApp</option>
-                  <option value="venmo">Venmo</option>
-                  <option value="bank">Bank Transfer</option>
-                  <option value="other">Other</option>
+                  <option value="cashapp">CashApp (Contact via email)</option>
                 </select>
               </div>
-              
-              <div class="form-group payment-verification">
-                <label for="payment-verification">Payment Verification</label>
-                <p class="verification-note" style="font-size: 0.9rem; margin-bottom: 10px; color: #666;">Please make your payment before submitting this form. Enter your payment details below for verification.</p>
-                <input type="text" id="payment-verification" name="payment-verification" placeholder="Transaction ID, confirmation number, or reference" required="">
-              </div>
-              
               <div class="form-group" id="paypal-email-field" style="display: none;">
                 <label for="paypal-user-email">Your PayPal Email (for payment verification)</label>
                 <input type="email" id="paypal-user-email" name="paypal-user-email">
               </div>
-              
-              <div class="form-group" id="payment-username-field" style="display: none;">
-                <label for="payment-username" id="payment-username-label">Your Username</label>
-                <input type="text" id="payment-username" name="payment-username">
-              </div>
-              
               <div id="paypal-button-container" style="margin-bottom: 15px; display: none;"></div>
               <button type="submit" class="btn btn-full">Schedule Consultation</button>
             </form>
           </div>
           
           <div id="booking-calendar-container" class="booking-content">
-            <!-- Payment Verification Box -->
-            <div class="payment-verification-box" style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 20px; margin-bottom: 20px;">
-              <h4 style="color: #8a56b5; margin-top: 0;">Payment Verification Required</h4>
-              <p>Before your appointment can be confirmed, payment verification is required:</p>
-              
-              <form id="calendly-payment-form">
-                <div class="form-group">
-                  <label for="calendly-payment-method">Payment Method Used</label>
-                  <select id="calendly-payment-method" name="calendly-payment-method" required="">
-                    <option value="" selected="" disabled="">Select Payment Method</option>
-                    <option value="paypal">PayPal</option>
-                    <option value="cashapp">CashApp</option>
-                    <option value="venmo">Venmo</option>
-                    <option value="bank">Bank Transfer</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                
-                <div class="form-group">
-                  <label for="calendly-payment-id" id="payment-method-label">Enter your payment username</label>
-                  <input type="text" id="calendly-payment-id" name="calendly-payment-id" placeholder="Enter your username for the selected payment method" required="">
-                </div>
-                
-                <div class="form-group">
-                  <button type="button" id="verify-payment-btn" class="btn" style="margin-top: 10px;">Verify Payment</button>
-                </div>
-              </form>
-              
-              <div id="payment-verification-success" style="display: none; color: green; margin-top: 15px;">
-                <i class="fas fa-check-circle"></i> Payment verified! You can now book your appointment below.
-              </div>
-              
-              <div id="payment-verification-instructions" style="margin-top: 15px; font-size: 0.9rem; color: #666;">
-                <p><strong>Note:</strong> If you haven't made a payment yet, please:</p>
-                <ol style="margin-left: 20px;">
-                  <li>Make your payment via your selected payment method</li>
-                  <li>For PayPal: Send to daniellempettigrew@gmail.com</li>
-                  <li>For CashApp: Send to $EvolveCoaching</li>
-                  <li>For Venmo: Use @EvolveCoaching</li>
-                  <li>For other methods: Contact evolveconnectioncoaching@gmail.com</li>
-                  <li>Enter your username for the payment method you used</li>
-                </ol>
-              </div>
-            </div>
-            
-            <!-- Calendly inline widget (initially hidden) -->
-            <div id="calendly-widget-container" style="display: none;">
-              <div class="calendly-inline-widget" data-url="https://calendly.com/evolveconnectioncoaching" style="position: relative;min-width:320px;height:700px;" data-processed="true">
-                <div class="calendly-spinner">
-                  <div class="calendly-bounce1"></div>
-                  <div class="calendly-bounce2"></div>
-                  <div class="calendly-bounce3"></div>
-                </div>
-                <iframe src="https://calendly.com/evolveconnectioncoaching?embed_domain=bc98df7f-269d-448a-b4e7-002ca4d1d77e--1747713600--f3068d48.preview.yourware.so&amp;embed_type=Inline" width="100%" height="100%" frameborder="0" title="Select a Date &amp; Time - Calendly"></iframe>
-              </div>
-              <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async=""></script>
-            </div>
+            <!-- Calendly inline widget begin -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/evolveconnectioncoaching" style="position: relative;min-width:320px;height:700px;" data-processed="true"><div class="calendly-spinner"><div class="calendly-bounce1"></div><div class="calendly-bounce2"></div><div class="calendly-bounce3"></div></div><iframe src="https://calendly.com/evolveconnectioncoaching?embed_domain=bc98df7f-269d-448a-b4e7-002ca4d1d77e--1747713600--f3068d48.preview.yourware.so&amp;embed_type=Inline" width="100%" height="100%" frameborder="0" title="Select a Date &amp; Time - Calendly"></iframe></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async=""></script>
+            <!-- Calendly inline widget end -->
           </div>
         </div>
       </div>
@@ -3403,7 +3268,7 @@
           <h3>Evolve | Connection Coaching</h3>
           <p>At Evolve | Connection Coaching, we believe that deep, meaningful connections are the foundation of growth, healing, and transformation.</p>
           <div class="footer-logo">
-            <img src="https://i.ibb.co/tp7t4D1V/IIRP-Logo-Blue.png" alt="IIRP Certification" class="certification-badge" style="max-width: 150px; margin-top: 15px;">
+            <img src="images/certification-badge.png" alt="IIRP Certification" class="certification-badge" style="max-width: 150px; margin-top: 15px;">
           </div>
         </div>
         <div class="footer-links">
