@@ -9,14 +9,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer=""></script>
   <script src="script.js" defer=""></script>
   <!-- Ultra Simple Chat - No JavaScript Dependencies -->
-  <script src="https://lib.youware.com/youware-lib.1747145198.js" id="yourware-lib"></script><script src="https://lib.youware.com/youware-lib.1747145198.js" id="yourware-lib"></script></head><body style=""><div id="static-chat" style="position:fixed; bottom:20px; right:20px; z-index:1000; font-family:Arial,sans-serif;">
+  <script src="https://lib.youware.com/youware-lib.1747145198.js" id="yourware-lib"></script><script src="https://lib.youware.com/youware-lib.1747145198.js" id="yourware-lib"></script><script src="https://lib.youware.com/youware-lib.1747145198.js" id="yourware-lib"></script></head><body><div id="static-chat" style="position:fixed; bottom:20px; right:20px; z-index:1000; font-family:Arial,sans-serif;">
     <!-- Main Chat Button -->
-    <button id="static-chat-btn" style="background-color:#8a56b5; color:white; border:none; border-radius:8px; padding:14px 20px; font-size:16px; cursor:pointer; box-shadow:0 4px 8px rgba(0,0,0,0.2); min-width:140px; min-height:44px;" onclick="document.getElementById('static-chat-popup').style.display='block';">
+    <button id="static-chat-btn" style="background-color:#8a56b5; color:white; border:none; border-radius:5px; padding:12px 20px; font-size:16px; cursor:pointer; box-shadow:0 4px 8px rgba(0,0,0,0.2);" onclick="document.getElementById('static-chat-popup').style.display='block';">
       Chat with us
     </button>
     
     <!-- Chat Popup -->
-    <div id="static-chat-popup" style="display:none; position:absolute; bottom:60px; right:0; width:300px; max-width:85vw; background:white; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.2); border:1px solid #ddd; overflow:hidden;">
+    <div id="static-chat-popup" style="display:none; position:absolute; bottom:60px; right:0; width:300px; background:white; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.2); border:1px solid #ddd; overflow:hidden;">
       <!-- Header -->
       <div style="background-color:#8a56b5; color:white; padding:12px; display:flex; justify-content:space-between; align-items:center;">
         <span style="font-weight:bold;">Evolve Chat Assistant</span>
@@ -24,34 +24,34 @@
       </div>
       
       <!-- Messages Container -->
-      <div id="static-chat-msgs" style="padding:15px; height:250px; overflow-y:auto; background-color:#f9f9f9; -webkit-overflow-scrolling:touch;">
+      <div id="static-chat-msgs" style="padding:15px; height:250px; overflow-y:auto; background-color:#f9f9f9;">
         <div style="background-color:#f0f0f0; padding:10px; margin-bottom:10px; border-radius:10px; max-width:80%;">
           Hi there! How can I help you today?
         </div>
       </div>
       
       <!-- Simple FAQ Buttons Instead of Input -->
-      <div style="padding:15px; border-top:1px solid #ddd; background-color:white; overflow-y:auto; max-height:200px; -webkit-overflow-scrolling:touch;">
-        <p style="margin:0 0 10px 0; color:#666; font-size:16px;">Click a question:</p>
-        <button onclick="addStaticMessage('What services do you offer?', 'We offer Individual, Relationship, Life Transitions, Leadership, and Pre-Marital Coaching.')" style="width:100%; margin-bottom:10px; padding:12px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:8px; cursor:pointer; text-align:left; min-height:44px; font-size:15px;">
+      <div style="padding:15px; border-top:1px solid #ddd; background-color:white; overflow-y:auto; max-height:200px;">
+        <p style="margin:0 0 10px 0; color:#666; font-size:14px;">Click a question:</p>
+        <button onclick="addStaticMessage('What services do you offer?', 'We offer Individual, Relationship, Life Transitions, Leadership, and Pre-Marital Coaching.')" style="width:100%; margin-bottom:8px; padding:8px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:5px; cursor:pointer; text-align:left;">
           What services do you offer?
         </button>
-        <button onclick="addStaticMessage('What are your prices?', 'Our coaching sessions range from $30 for a consultation to $450 for a package.')" style="width:100%; margin-bottom:10px; padding:12px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:8px; cursor:pointer; text-align:left; min-height:44px; font-size:15px;">
+        <button onclick="addStaticMessage('What are your prices?', 'Our coaching sessions range from $30 for a consultation to $450 for a package.')" style="width:100%; margin-bottom:8px; padding:8px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:5px; cursor:pointer; text-align:left;">
           What are your prices?
         </button>
-        <button onclick="addStaticMessage('Are payment plans offered?', 'Yes! At Evolve | Connection Coaching, I want coaching to be accessible and sustainable. Flexible payment plans are available for most coaching packages. Let\'s discuss a plan that works for you during your free consultation.')" style="width:100%; margin-bottom:10px; padding:12px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:8px; cursor:pointer; text-align:left; min-height:44px; font-size:15px;">
+        <button onclick="addStaticMessage('Are payment plans offered?', 'Yes! At Evolve | Connection Coaching, I want coaching to be accessible and sustainable. Flexible payment plans are available for most coaching packages. Let\'s discuss a plan that works for you during your free consultation.')" style="width:100%; margin-bottom:8px; padding:8px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:5px; cursor:pointer; text-align:left;">
           Are payment plans offered?
         </button>
-        <button onclick="addStaticMessage('Is sliding scale or equity-based pricing offered?', 'I believe in equity and accessibility. A limited number of sliding scale slots may be available each quarter for those with financial need. If cost is a barrier, please reach out—we\'re happy to explore options together.')" style="width:100%; margin-bottom:10px; padding:12px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:8px; cursor:pointer; text-align:left; min-height:44px; font-size:15px;">
+        <button onclick="addStaticMessage('Is sliding scale or equity-based pricing offered?', 'I believe in equity and accessibility. A limited number of sliding scale slots may be available each quarter for those with financial need. If cost is a barrier, please reach out—we\'re happy to explore options together.')" style="width:100%; margin-bottom:8px; padding:8px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:5px; cursor:pointer; text-align:left;">
           Is sliding scale pricing offered?
         </button>
-        <button onclick="addStaticMessage('Is insurance accepted?', 'Coaching is not a medical or clinical service, so insurance does not cover it. However, coaching is often an empowering complement to therapy and personal development work. We\'re happy to help you find the right balance of support that fits your needs.')" style="width:100%; margin-bottom:10px; padding:12px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:8px; cursor:pointer; text-align:left; min-height:44px; font-size:15px;">
+        <button onclick="addStaticMessage('Is insurance accepted?', 'Coaching is not a medical or clinical service, so insurance does not cover it. However, coaching is often an empowering complement to therapy and personal development work. We\'re happy to help you find the right balance of support that fits your needs.')" style="width:100%; margin-bottom:8px; padding:8px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:5px; cursor:pointer; text-align:left;">
           Is insurance accepted?
         </button>
-        <button onclick="addStaticMessage('What is your cancellation policy?', 'We ask for at least 24 hours\' notice if you need to cancel or reschedule a session. If a session is canceled with less than 24 hours\' notice, a 50% fee may apply. No-shows or same-day cancellations may be charged the full session fee.')" style="width:100%; margin-bottom:10px; padding:12px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:8px; cursor:pointer; text-align:left; min-height:44px; font-size:15px;">
+        <button onclick="addStaticMessage('What is your cancellation policy?', 'We ask for at least 24 hours\' notice if you need to cancel or reschedule a session. If a session is canceled with less than 24 hours\' notice, a 50% fee may apply. No-shows or same-day cancellations may be charged the full session fee.')" style="width:100%; margin-bottom:8px; padding:8px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:5px; cursor:pointer; text-align:left;">
           What is your cancellation policy?
         </button>
-        <button onclick="addStaticMessage('How can I contact you?', 'You can reach us at evolveconnectioncoaching@gmail.com.')" style="width:100%; margin-bottom:10px; padding:12px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:8px; cursor:pointer; text-align:left; min-height:44px; font-size:15px;">
+        <button onclick="addStaticMessage('How can I contact you?', 'You can reach us at evolveconnectioncoaching@gmail.com.')" style="width:100%; margin-bottom:8px; padding:8px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:5px; cursor:pointer; text-align:left;">
           How can I contact you?
         </button>
       </div>
@@ -478,67 +478,22 @@
     
     #user-input {
       flex: 1;
-      padding: 12px 15px;
+      padding: 10px;
       border: 1px solid #ddd;
-      border-radius: 8px;
+      border-radius: 5px;
       margin-right: 5px;
-      font-size: 16px;
-      -webkit-appearance: none;
-      appearance: none;
     }
     
     #send-btn {
       background-color: #8a56b5;
       color: white;
       border: none;
-      border-radius: 8px;
-      padding: 12px 18px;
+      border-radius: 5px;
+      padding: 10px 15px;
       cursor: pointer;
-      min-width: 80px;
-      min-height: 44px;
-      font-size: 16px;
     }
   </style>
   <script>
-    // Mobile menu functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      // Mobile menu toggle
-      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-      const mobileMenu = document.querySelector('.mobile-menu');
-      const mobileMenuClose = document.querySelector('.mobile-menu-close');
-      const overlay = document.querySelector('.overlay');
-      const mobileMenuLinks = document.querySelectorAll('.mobile-menu-links a');
-      
-      // Makes sure page always starts at the top for mobile
-      window.onload = function() {
-        window.scrollTo(0, 0);
-      };
-      
-      // Toggle mobile menu
-      if(mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', function() {
-          mobileMenu.classList.add('active');
-          document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
-        });
-      }
-      
-      // Close mobile menu
-      if(mobileMenuClose) {
-        mobileMenuClose.addEventListener('click', function() {
-          mobileMenu.classList.remove('active');
-          document.body.style.overflow = ''; // Restore scrolling
-        });
-      }
-      
-      // Close menu when clicking a link
-      mobileMenuLinks.forEach(link => {
-        link.addEventListener('click', function() {
-          mobileMenu.classList.remove('active');
-          document.body.style.overflow = ''; // Restore scrolling
-        });
-      });
-    });
-    
     // Enhanced PayPal integration with session pricing
     document.addEventListener('DOMContentLoaded', function() {
       const paymentMethodSelect = document.getElementById('payment-method');
@@ -563,15 +518,23 @@
         paypalContainer.style.display = 'none';
       }
       
-      // Show/hide PayPal email field based on payment method
+      // Show/hide payment fields based on payment method
       if (paymentMethodSelect) {
         paymentMethodSelect.addEventListener('change', function() {
           const paypalEmailField = document.getElementById('paypal-email-field');
+          const paymentUsernameField = document.getElementById('payment-username-field');
+          const paymentUsernameLabel = document.getElementById('payment-username-label');
           
+          // Hide all payment-specific fields first
+          if (paypalEmailField) paypalEmailField.style.display = 'none';
+          if (paymentUsernameField) paymentUsernameField.style.display = 'none';
+          
+          // Show relevant fields based on payment method
           if (this.value === 'paypal' && paypalEmailField) {
             paypalEmailField.style.display = 'block';
-          } else if (paypalEmailField) {
-            paypalEmailField.style.display = 'none';
+          } else if ((this.value === 'cashapp' || this.value === 'venmo') && paymentUsernameField) {
+            paymentUsernameField.style.display = 'block';
+            paymentUsernameLabel.textContent = 'Your ' + (this.value === 'cashapp' ? 'CashApp' : 'Venmo') + ' Username';
           }
         });
       }
@@ -838,19 +801,18 @@
     .mobile-menu {
       position: fixed;
       top: 0;
-      left: 0;
-      width: 100%;
+      right: -300px;
+      width: 300px;
       height: 100vh;
-      background-color: rgba(255, 255, 255, 0.97);
+      background-color: white;
       z-index: 1001;
-      padding: 80px 20px 40px;
+      padding: 50px 30px;
       transition: var(--transition);
-      display: none;
-      overflow-y: auto;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.05);
     }
 
     .mobile-menu.active {
-      display: block;
+      right: 0;
     }
 
     .mobile-menu-close {
@@ -861,39 +823,34 @@
       color: white;
       border: none;
       font-size: 1.3rem;
-      width: 44px;
-      height: 44px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      z-index: 1002;
     }
 
     .mobile-menu-links {
       display: flex;
       flex-direction: column;
-      gap: 5px;
-      margin: 0 auto;
-      max-width: 300px;
-      text-align: center;
+      gap: 20px;
+      margin-top: 30px;
     }
 
     .mobile-menu-links a {
       color: var(--text-color);
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       transition: var(--transition);
-      padding: 12px 0;
-      border-bottom: 1px solid rgba(138, 86, 181, 0.1);
-      font-weight: 500;
-      border-radius: 8px;
+      padding: 5px 0;
+      border-bottom: 1px solid #f0f0f0;
     }
 
     .mobile-menu-links a:hover {
       color: var(--primary-color);
-      background-color: var(--secondary-color-light);
+      padding-left: 5px;
     }
 
     .overlay {
@@ -1757,11 +1714,9 @@
       .form-group input, 
       .form-group select, 
       .form-group textarea {
-        padding: 16px;
+        padding: 14px;
         font-size: 16px; /* Prevents zoom on iOS */
         border-radius: 8px;
-        -webkit-appearance: none; /* Removes default styling on iOS */
-        appearance: none;
       }
       
       /* Improve mobile tap targets */
@@ -1779,10 +1734,10 @@
       
       /* Improve mobile menu */
       .mobile-menu {
-        width: 100%;
-        padding: 80px 20px 40px;
-        background-color: rgba(255, 255, 255, 0.97);
-        text-align: center;
+        width: 85%;
+        padding: 60px 25px;
+        background: linear-gradient(to bottom, white, var(--secondary-color-light));
+        border-left: 3px solid var(--primary-color);
       }
       
       /* More space between service cards on mobile */
@@ -1816,7 +1771,6 @@
       
       body {
         overflow-x: hidden;
-        -webkit-text-size-adjust: 100%; /* Prevent text size adjustment on orientation change */
       }
 
       .header {
@@ -1833,7 +1787,6 @@
       .hero {
         padding-top: 110px;
         margin-top: 30px;
-        min-height: 500px;
       }
       
       .section {
@@ -2462,6 +2415,74 @@
         document.querySelectorAll('.booking-tab')[1].classList.add('active');
       }
     }
+    
+    // Calendly payment verification
+    document.addEventListener('DOMContentLoaded', function() {
+      const verifyPaymentBtn = document.getElementById('verify-payment-btn');
+      const calendlyPaymentMethod = document.getElementById('calendly-payment-method');
+      const calendlyUsernameField = document.getElementById('calendly-payment-username-field');
+      const calendlyUsernameLabel = document.getElementById('calendly-payment-username-label');
+      
+      // Update label based on payment method
+      if (calendlyPaymentMethod) {
+        calendlyPaymentMethod.addEventListener('change', function() {
+          const paymentLabel = document.getElementById('payment-method-label');
+          if (paymentLabel) {
+            paymentLabel.textContent = 'Enter your ' + this.value + ' username';
+          }
+        });
+      }
+      
+      // Verify payment and show Calendly widget
+      if (verifyPaymentBtn) {
+        verifyPaymentBtn.addEventListener('click', function() {
+          const paymentMethod = document.getElementById('calendly-payment-method').value;
+          const paymentId = document.getElementById('calendly-payment-id').value;
+          const paymentUsername = document.getElementById('calendly-payment-username')?.value || '';
+          
+          if (!paymentMethod || !paymentId) {
+            alert('Please fill in all required payment details');
+            return;
+          }
+          
+          // Show success message and Calendly widget
+          document.getElementById('payment-verification-success').style.display = 'block';
+          document.getElementById('calendly-widget-container').style.display = 'block';
+          verifyPaymentBtn.disabled = true;
+          verifyPaymentBtn.textContent = 'Payment Verified';
+          verifyPaymentBtn.style.backgroundColor = '#4CAF50';
+          
+          // Store verification in session storage
+          sessionStorage.setItem('paymentVerified', 'true');
+          sessionStorage.setItem('paymentDetails', JSON.stringify({
+            method: paymentMethod,
+            id: paymentId,
+            username: paymentUsername
+          }));
+        });
+      }
+      
+      // Check if payment was already verified
+      if (sessionStorage.getItem('paymentVerified') === 'true') {
+        document.getElementById('payment-verification-success').style.display = 'block';
+        document.getElementById('calendly-widget-container').style.display = 'block';
+        if (verifyPaymentBtn) {
+          verifyPaymentBtn.disabled = true;
+          verifyPaymentBtn.textContent = 'Payment Verified';
+          verifyPaymentBtn.style.backgroundColor = '#4CAF50';
+        }
+        
+        // Restore saved payment method and update the label
+        const savedPaymentDetails = JSON.parse(sessionStorage.getItem('paymentDetails') || '{}');
+        if (savedPaymentDetails.method && calendlyPaymentMethod) {
+          calendlyPaymentMethod.value = savedPaymentDetails.method;
+          const paymentLabel = document.getElementById('payment-method-label');
+          if (paymentLabel) {
+            paymentLabel.textContent = 'Enter your ' + savedPaymentDetails.method + ' username';
+          }
+        }
+      }
+    });
   </script>
   
   <!-- Smart Chat Widget Script -->
@@ -2684,6 +2705,14 @@
     <div class="mobile-menu-links">
       <a href="#about">About</a>
       <a href="#services">Services</a>
+      <div class="mobile-submenu">
+        <a href="#personal-growth" class="mobile-submenu-item">- Individual Coaching</a>
+        <a href="#personal-growth" class="mobile-submenu-item">- Life Transitions Coaching</a>
+        <a href="#relationships" class="mobile-submenu-item">- Relationship Coaching</a>
+        <a href="#relationships" class="mobile-submenu-item">- Pre-Marital Coaching</a>
+        <a href="#professional" class="mobile-submenu-item">- Leadership Coaching</a>
+        <a href="#getting-started" class="mobile-submenu-item">- Consultation</a>
+      </div>
       <a href="#testimonials">Testimonials</a>
       <a href="#workshops">Workshops</a>
       <a href="#faq">FAQ</a>
@@ -2757,9 +2786,9 @@
           </div>
           
           <div class="certifications" style="margin-top: 25px; margin-bottom: 25px;">
-            <h3 style="font-size: 1.2rem; margin-bottom: 15px;">Professional Certifications</h3>
+            <h3 style="font-size: 1.2rem; margin-bottom: 15px;"></h3>
             <div style="display: flex; align-items: center; gap: 20px;">
-              <img src="https://i.ibb.co/tp7t4D1V/IIRP-Logo-Blue.png" alt="IIRP Professional Coaching Certification" style="max-width: 180px; height: auto;">
+              <img src="https://i.ibb.co/MkLRHg5V/Certified-Life-Coach-Logo.jpg" alt="Certified Life Coach" style="max-width: 180px; height: auto;">
             </div>
           </div>
           
@@ -2782,16 +2811,16 @@
       
       <!-- Personal Growth Section -->
       <div class="service-category" id="personal-growth">
-        <h2 class="category-title" data-aos="fade-up">Personal Growth</h2>
+        <h2 class="category-title" data-aos="fade-up">Personal Growth &amp; Self-Discovery</h2>
         <div class="services-grid">
           <div class="service-card" data-aos="fade-up" data-aos-delay="100">
             <div class="service-card-content">
               <h3>Individual Coaching</h3>
-              <p class="service-price">$100 - $200 per session</p>
+              <p class="service-price">$100 per session</p>
               <div class="service-features">
                 <div class="service-feature">
                   <i class="fas fa-check"></i>
-                  <span>Self-reflection &amp; emotional awareness</span>
+                  <span>Cultivate self-awareness &amp; emotional resilience</span>
                 </div>
                 <div class="service-feature">
                   <i class="fas fa-check"></i>
@@ -2799,11 +2828,11 @@
                 </div>
                 <div class="service-feature">
                   <i class="fas fa-check"></i>
-                  <span>Cultivate self-love and confidence</span>
+                  <span>Build confidence &amp; set intentional goals</span>
                 </div>
                 <div class="service-feature">
                   <i class="fas fa-check"></i>
-                  <span>Set intentional goals for transformation</span>
+                  <span>Create lasting transformation through restorative practice</span>
                 </div>
               </div>
               <a href="#booking" class="btn">Book a Session</a>
@@ -2813,11 +2842,11 @@
           <div class="service-card" data-aos="fade-up" data-aos-delay="200">
             <div class="service-card-content">
               <h3>Life Transitions Coaching</h3>
-              <p class="service-price">$120 - $250 per session</p>
+              <p class="service-price">$100 per session</p>
               <div class="service-features">
                 <div class="service-feature">
                   <i class="fas fa-check"></i>
-                  <span>Find clarity in uncertain times</span>
+                  <span>Find clarity during change or uncertainty</span>
                 </div>
                 <div class="service-feature">
                   <i class="fas fa-check"></i>
@@ -2825,11 +2854,11 @@
                 </div>
                 <div class="service-feature">
                   <i class="fas fa-check"></i>
-                  <span>Process and heal from past experiences</span>
+                  <span>Heal from past experiences</span>
                 </div>
                 <div class="service-feature">
                   <i class="fas fa-check"></i>
-                  <span>Develop a roadmap for your next chapter</span>
+                  <span>Design a roadmap for your next chapter</span>
                 </div>
               </div>
               <a href="#booking" class="btn">Book a Session</a>
@@ -2840,28 +2869,28 @@
       
       <!-- Relationship Section -->
       <div class="service-category" id="relationships">
-        <h2 class="category-title" data-aos="fade-up">Relationship Services</h2>
+        <h2 class="category-title" data-aos="fade-up">Connection, Repair &amp; Growth</h2>
         <div class="services-grid">
           <div class="service-card" data-aos="fade-up" data-aos-delay="100">
             <div class="service-card-content">
               <h3>Relationship Coaching</h3>
-              <p class="service-price">$120 - $250 per session</p>
+              <p class="service-price">$150 per session</p>
               <div class="service-features">
                 <div class="service-feature">
                   <i class="fas fa-check"></i>
-                  <span>Develop healthier communication skills</span>
+                  <span>Strengthen communication &amp; rebuild trust</span>
                 </div>
                 <div class="service-feature">
                   <i class="fas fa-check"></i>
-                  <span>Navigate conflict with honesty and empathy</span>
+                  <span>Navigate conflict with empathy &amp; honesty</span>
                 </div>
                 <div class="service-feature">
                   <i class="fas fa-check"></i>
-                  <span>Repair and restore relationships after harm</span>
+                  <span>Repair harm and restore emotional safety</span>
                 </div>
                 <div class="service-feature">
                   <i class="fas fa-check"></i>
-                  <span>Build deeper emotional connections and trust</span>
+                  <span>Deepen intimacy and shared understanding</span>
                 </div>
               </div>
               <a href="#booking" class="btn">Book a Session</a>
@@ -2871,23 +2900,23 @@
           <div class="service-card" data-aos="fade-up" data-aos-delay="200">
             <div class="service-card-content">
               <h3>Pre-Marital Coaching</h3>
-              <p class="service-price">Starting at $450 (4 sessions)</p>
+              <p class="service-price">Starting at $600 for 4 sessions</p>
               <div class="service-features">
                 <div class="service-feature">
                   <i class="fas fa-check"></i>
-                  <span>Communication &amp; active listening</span>
+                  <span>Clarify shared values &amp; expectations</span>
                 </div>
                 <div class="service-feature">
                   <i class="fas fa-check"></i>
-                  <span>Conflict resolution &amp; restorative dialogue</span>
+                  <span>Practice restorative communication</span>
                 </div>
                 <div class="service-feature">
                   <i class="fas fa-check"></i>
-                  <span>Values &amp; relationship expectations</span>
+                  <span>Address family, cultural, and personal dynamics</span>
                 </div>
                 <div class="service-feature">
                   <i class="fas fa-check"></i>
-                  <span>Family &amp; cultural dynamics</span>
+                  <span>Build a strong foundation for partnership</span>
                 </div>
               </div>
               <a href="#booking" class="btn">Book a Package</a>
@@ -2898,28 +2927,58 @@
       
       <!-- Professional Development Section -->
       <div class="service-category" id="professional">
-        <h2 class="category-title" data-aos="fade-up">Professional Development</h2>
+        <h2 class="category-title" data-aos="fade-up">Integrity, Influence &amp; Impact</h2>
         <div class="services-grid">
           <div class="service-card" data-aos="fade-up" data-aos-delay="100">
             <div class="service-card-content">
-              <h3>Leadership Coaching</h3>
-              <p class="service-price">$150 - $300 per session</p>
+              <h3>Restorative Leadership Coaching</h3>
+              <p class="service-price">$300 per session</p>
               <div class="service-features">
                 <div class="service-feature">
                   <i class="fas fa-check"></i>
-                  <span>Lead with integrity, empathy, and accountability</span>
+                  <span>Lead with empathy, authenticity, and accountability</span>
                 </div>
                 <div class="service-feature">
                   <i class="fas fa-check"></i>
-                  <span>Strengthen emotional intelligence</span>
+                  <span>Strengthen emotional intelligence and deepen self-awareness</span>
                 </div>
                 <div class="service-feature">
                   <i class="fas fa-check"></i>
-                  <span>Foster trust and collaboration in teams</span>
+                  <span>Cultivate a leadership presence that inspires growth</span>
                 </div>
                 <div class="service-feature">
                   <i class="fas fa-check"></i>
-                  <span>Navigate difficult conversations with confidence</span>
+                  <span>Build a restorative team culture rooted in trust</span>
+                </div>
+                <div class="service-feature">
+                  <i class="fas fa-check"></i>
+                  <span>Navigate tough conversations with clarity and care</span>
+                </div>
+              </div>
+              <a href="#booking" class="btn">Book a Session</a>
+            </div>
+          </div>
+          
+          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card-content">
+              <h3>Professional Identity &amp; Job Search Coaching</h3>
+              <p class="service-price">$300 per session</p>
+              <div class="service-features">
+                <div class="service-feature">
+                  <i class="fas fa-check"></i>
+                  <span>Align your career journey with your values</span>
+                </div>
+                <div class="service-feature">
+                  <i class="fas fa-check"></i>
+                  <span>Get expert guidance on resumes and applications</span>
+                </div>
+                <div class="service-feature">
+                  <i class="fas fa-check"></i>
+                  <span>Practice interview questions aligned to your experiences</span>
+                </div>
+                <div class="service-feature">
+                  <i class="fas fa-check"></i>
+                  <span>Clarify your professional story and leadership identity</span>
                 </div>
               </div>
               <a href="#booking" class="btn">Book a Session</a>
@@ -2930,13 +2989,17 @@
       
       <!-- Getting Started Section -->
       <div class="service-category" id="getting-started">
-        <h2 class="category-title" data-aos="fade-up">Getting Started</h2>
+        <h2 class="category-title" data-aos="fade-up">Start Here</h2>
         <div class="services-grid">
           <div class="service-card" data-aos="fade-up" data-aos-delay="50">
             <div class="service-card-content">
-              <h3>$30 Consultation</h3>
+              <h3>Complimentary Consultation</h3>
               <p class="service-price">$30 for 30 minutes</p>
               <div class="service-features">
+                <div class="service-feature">
+                  <i class="fas fa-check"></i>
+                  <span>No pressure conversation to determine fit</span>
+                </div>
                 <div class="service-feature">
                   <i class="fas fa-check"></i>
                   <span>Explore your goals and coaching needs</span>
@@ -2947,14 +3010,101 @@
                 </div>
                 <div class="service-feature">
                   <i class="fas fa-check"></i>
-                  <span>Experience the restorative approach firsthand</span>
-                </div>
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>No pressure conversation to determine fit</span>
+                  <span>Learn how restorative coaching can support you</span>
                 </div>
               </div>
-              <a href="#booking" class="btn">Schedule Now</a>
+              <a href="#booking" class="btn">Schedule a Call</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Customized Coaching Bundles Section -->
+      <div class="service-category" id="bundles">
+        <h2 class="category-title" data-aos="fade-up">Customized Coaching Bundles</h2>
+        <div class="services-grid">
+          <div class="service-card" data-aos="fade-up" data-aos-delay="50" style="grid-column: 1 / -1; max-width: 800px; margin: 0 auto;">
+            <div class="service-card-content">
+              <h3>Deeper Support, Lasting Growth</h3>
+              <p>Looking for deeper transformation or ongoing support? Evolve | Connection Coaching offers flexible 3–6 month coaching bundles that are personalized to meet your goals, schedule, and pace of growth. Whether you're navigating a relationship shift, stepping into leadership, or rediscovering yourself, coaching bundles allow us to work together over time with intentional structure and room for reflection.</p>
+              
+              <div style="margin-top: 20px; margin-bottom: 20px;">
+                <h4 style="color: var(--primary-color); margin-bottom: 15px;">Bundle Benefits:</h4>
+                <div class="service-features">
+                  <div class="service-feature">
+                    <i class="fas fa-check"></i>
+                    <span>Personalized session roadmap based on your goals</span>
+                  </div>
+                  <div class="service-feature">
+                    <i class="fas fa-check"></i>
+                    <span>Priority scheduling and consistent session rhythm</span>
+                  </div>
+                  <div class="service-feature">
+                    <i class="fas fa-check"></i>
+                    <span>Optional support between sessions (via email or short check-ins)</span>
+                  </div>
+                  <div class="service-feature">
+                    <i class="fas fa-check"></i>
+                    <span>Discounted rate when booking a full bundle</span>
+                  </div>
+                  <div class="service-feature">
+                    <i class="fas fa-check"></i>
+                    <span>Deepened trust, insight, and accountability through extended partnership</span>
+                  </div>
+                </div>
+              </div>
+              
+              <a href="#booking" class="btn">Book a consultation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Workshops Section -->
+      <div class="service-category" id="group-services">
+        <h2 class="category-title" data-aos="fade-up">Workshops, Trainings &amp; Retreats</h2>
+        <div class="services-grid">
+          <div class="service-card" data-aos="fade-up" data-aos-delay="50" style="grid-column: 1 / -1; max-width: 800px; margin: 0 auto;">
+            <div class="service-card-content">
+              <h3>Restorative Learning in Community</h3>
+              <p>Looking to bring restorative practices to your team, organization, or event? Evolve | Connection Coaching offers engaging, reflective, and transformational group experiences designed to deepen connection, improve communication, and support authentic growth.</p>
+              
+              <p>These offerings are ideal for higher education spaces, leadership teams, DEI initiatives, couples' retreats, or community groups looking to infuse restorative values into their work and relationships.</p>
+              
+              <div style="margin-top: 20px; margin-bottom: 15px;">
+                <h4 style="color: var(--primary-color); margin-bottom: 15px;">Available Formats:</h4>
+                <div class="service-features">
+                  <div class="service-feature">
+                    <i class="fas fa-check"></i>
+                    <span><strong>Interactive Workshops</strong> — 60–90 minute sessions focused on themes like restorative communication, accountability, emotional intelligence, and conflict resolution</span>
+                  </div>
+                  <div class="service-feature">
+                    <i class="fas fa-check"></i>
+                    <span><strong>Speaking Engagements</strong> — Dynamic, thoughtful talks customized for your audience, from student affairs to leadership development</span>
+                  </div>
+                  <div class="service-feature">
+                    <i class="fas fa-check"></i>
+                    <span><strong>Group Trainings</strong> — Half-day or full-day intensives designed for teams and organizations seeking to embed restorative practices into culture and communication</span>
+                  </div>
+                  <div class="service-feature">
+                    <i class="fas fa-check"></i>
+                    <span><strong>Retreat Facilitation</strong> — Multi-session experiences to pause, reconnect, and evolve individually and collectively</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div style="margin-top: 20px; margin-bottom: 20px;">
+                <h4 style="color: var(--primary-color); margin-bottom: 15px;">Topics can include:</h4>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
+                  <span class="value-tag">Restorative Leadership in Practice</span>
+                  <span class="value-tag">Healing-Centered Accountability</span>
+                  <span class="value-tag">Communication That Builds Trust</span>
+                  <span class="value-tag">Building a Culture of Connection</span>
+                  <span class="value-tag">Leading with Empathy in Challenging Times</span>
+                </div>
+              </div>
+              
+              <a href="#contact" class="btn">Reach out to discuss options</a>
             </div>
           </div>
         </div>
@@ -3145,19 +3295,27 @@
             </div>
             <div class="pricing-item">
               <span>Individual Coaching</span>
-              <span>$100 - $200</span>
+              <span>$100</span>
+            </div>
+            <div class="pricing-item">
+              <span>Life Transitions Coaching</span>
+              <span>$100</span>
             </div>
             <div class="pricing-item">
               <span>Relationship Coaching</span>
-              <span>$120 - $250</span>
+              <span>$150</span>
             </div>
             <div class="pricing-item">
-              <span>Leadership Coaching</span>
-              <span>$150 - $300</span>
+              <span>Restorative Leadership Coaching</span>
+              <span>$300</span>
+            </div>
+            <div class="pricing-item">
+              <span>Professional Identity &amp; Job Search</span>
+              <span>$300</span>
             </div>
             <div class="pricing-item">
               <span>Pre-Marital Package (4 sessions)</span>
-              <span>$450</span>
+              <span>$600</span>
             </div>
           </div>
         </div>
@@ -3203,23 +3361,92 @@
                 <select id="payment-method" name="payment-method" required="">
                   <option value="" selected="" disabled="">Select Payment Method</option>
                   <option value="paypal">PayPal</option>
-                  <option value="cashapp">CashApp (Contact via email)</option>
+                  <option value="cashapp">CashApp</option>
+                  <option value="venmo">Venmo</option>
+                  <option value="bank">Bank Transfer</option>
+                  <option value="other">Other</option>
                 </select>
               </div>
+              
+              <div class="form-group payment-verification">
+                <label for="payment-verification">Payment Verification</label>
+                <p class="verification-note" style="font-size: 0.9rem; margin-bottom: 10px; color: #666;">Please make your payment before submitting this form. Enter your payment details below for verification.</p>
+                <input type="text" id="payment-verification" name="payment-verification" placeholder="Transaction ID, confirmation number, or reference" required="">
+              </div>
+              
               <div class="form-group" id="paypal-email-field" style="display: none;">
                 <label for="paypal-user-email">Your PayPal Email (for payment verification)</label>
                 <input type="email" id="paypal-user-email" name="paypal-user-email">
               </div>
+              
+              <div class="form-group" id="payment-username-field" style="display: none;">
+                <label for="payment-username" id="payment-username-label">Your Username</label>
+                <input type="text" id="payment-username" name="payment-username">
+              </div>
+              
               <div id="paypal-button-container" style="margin-bottom: 15px; display: none;"></div>
               <button type="submit" class="btn btn-full">Schedule Consultation</button>
             </form>
           </div>
           
           <div id="booking-calendar-container" class="booking-content">
-            <!-- Calendly inline widget begin -->
-            <div class="calendly-inline-widget" data-url="https://calendly.com/evolveconnectioncoaching" style="position: relative;min-width:320px;height:700px;" data-processed="true"><div class="calendly-spinner"><div class="calendly-bounce1"></div><div class="calendly-bounce2"></div><div class="calendly-bounce3"></div></div><iframe src="https://calendly.com/evolveconnectioncoaching?embed_domain=bc98df7f-269d-448a-b4e7-002ca4d1d77e--1747713600--f3068d48.preview.yourware.so&amp;embed_type=Inline" width="100%" height="100%" frameborder="0" title="Select a Date &amp; Time - Calendly"></iframe></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async=""></script>
-            <!-- Calendly inline widget end -->
+            <!-- Payment Verification Box -->
+            <div class="payment-verification-box" style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 20px; margin-bottom: 20px;">
+              <h4 style="color: #8a56b5; margin-top: 0;">Payment Verification Required</h4>
+              <p>Before your appointment can be confirmed, payment verification is required:</p>
+              
+              <form id="calendly-payment-form">
+                <div class="form-group">
+                  <label for="calendly-payment-method">Payment Method Used</label>
+                  <select id="calendly-payment-method" name="calendly-payment-method" required="">
+                    <option value="" selected="" disabled="">Select Payment Method</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="cashapp">CashApp</option>
+                    <option value="venmo">Venmo</option>
+                    <option value="bank">Bank Transfer</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label for="calendly-payment-id" id="payment-method-label">Enter your payment username</label>
+                  <input type="text" id="calendly-payment-id" name="calendly-payment-id" placeholder="Enter your username for the selected payment method" required="">
+                </div>
+                
+                <div class="form-group">
+                  <button type="button" id="verify-payment-btn" class="btn" style="margin-top: 10px;">Verify Payment</button>
+                </div>
+              </form>
+              
+              <div id="payment-verification-success" style="display: none; color: green; margin-top: 15px;">
+                <i class="fas fa-check-circle"></i> Payment verified! You can now book your appointment below.
+              </div>
+              
+              <div id="payment-verification-instructions" style="margin-top: 15px; font-size: 0.9rem; color: #666;">
+                <p><strong>Note:</strong> If you haven't made a payment yet, please:</p>
+                <ol style="margin-left: 20px;">
+                  <li>Make your payment via your selected payment method</li>
+                  <li>For PayPal: Send to daniellempettigrew@gmail.com</li>
+                  <li>For CashApp: Send to $EvolveCoaching</li>
+                  <li>For Venmo: Use @EvolveCoaching</li>
+                  <li>For other methods: Contact evolveconnectioncoaching@gmail.com</li>
+                  <li>Enter your username for the payment method you used</li>
+                </ol>
+              </div>
+            </div>
+            
+            <!-- Calendly inline widget (initially hidden) -->
+            <div id="calendly-widget-container" style="display: none;">
+              <div class="calendly-inline-widget" data-url="https://calendly.com/evolveconnectioncoaching" style="position: relative;min-width:320px;height:700px;" data-processed="true">
+                <div class="calendly-spinner">
+                  <div class="calendly-bounce1"></div>
+                  <div class="calendly-bounce2"></div>
+                  <div class="calendly-bounce3"></div>
+                </div>
+                <iframe src="https://calendly.com/evolveconnectioncoaching?embed_domain=bc98df7f-269d-448a-b4e7-002ca4d1d77e--1747713600--f3068d48.preview.yourware.so&amp;embed_type=Inline" width="100%" height="100%" frameborder="0" title="Select a Date &amp; Time - Calendly"></iframe>
+              </div>
+              <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async=""></script>
+            </div>
           </div>
         </div>
       </div>
@@ -3304,9 +3531,7 @@
         <div class="footer-about">
           <h3>Evolve | Connection Coaching</h3>
           <p>At Evolve | Connection Coaching, we believe that deep, meaningful connections are the foundation of growth, healing, and transformation.</p>
-          <div class="footer-logo">
-            <img src="https://i.ibb.co/tp7t4D1V/IIRP-Logo-Blue.png" alt="IIRP Certification" class="certification-badge" style="max-width: 150px; margin-top: 15px;">
-          </div>
+          
         </div>
         <div class="footer-links">
           <h4>Quick Links</h4>
