@@ -1,2655 +1,22 @@
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Evolve Connection Coaching offers restorative practices to transform relationships and communication. Book coaching sessions, workshops, and more.">
-  <title>Evolve | Connection Coaching - A Restorative Approach to Life &amp; Relationships</title>
+  <title>Evolve | Connection Coaching - A Restorative Approach to Life & Relationships</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer=""></script>
-  <script src="script.js" defer=""></script>
-  <!-- Ultra Simple Chat - No JavaScript Dependencies -->
-  <script src="https://lib.youware.com/youware-lib.1747145198.js" id="yourware-lib"></script><script src="https://lib.youware.com/youware-lib.1747145198.js" id="yourware-lib"></script><script src="https://lib.youware.com/youware-lib.1747145198.js" id="yourware-lib"></script></head><body style=""><div id="static-chat" style="position:fixed; bottom:20px; right:20px; z-index:1000; font-family:Arial,sans-serif;">
-    <!-- Main Chat Button -->
-    <button id="static-chat-btn" style="background-color:#8a56b5; color:white; border:none; border-radius:5px; padding:12px 20px; font-size:16px; cursor:pointer; box-shadow:0 4px 8px rgba(0,0,0,0.2);" onclick="document.getElementById('static-chat-popup').style.display='block';">
-      Chat with us
-    </button>
-    
-    <!-- Chat Popup -->
-    <div id="static-chat-popup" style="display:none; position:absolute; bottom:60px; right:0; width:300px; background:white; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.2); border:1px solid #ddd; overflow:hidden;">
-      <!-- Header -->
-      <div style="background-color:#8a56b5; color:white; padding:12px; display:flex; justify-content:space-between; align-items:center;">
-        <span style="font-weight:bold;">Evolve Chat Assistant</span>
-        <button onclick="document.getElementById('static-chat-popup').style.display='none';" style="background:none; border:none; color:white; font-size:16px; cursor:pointer;">X</button>
-      </div>
-      
-      <!-- Messages Container -->
-      <div id="static-chat-msgs" style="padding:15px; height:250px; overflow-y:auto; background-color:#f9f9f9;">
-        <div style="background-color:#f0f0f0; padding:10px; margin-bottom:10px; border-radius:10px; max-width:80%;">
-          Hi there! How can I help you today?
-        </div>
-      </div>
-      
-      <!-- Simple FAQ Buttons Instead of Input -->
-      <div style="padding:15px; border-top:1px solid #ddd; background-color:white; overflow-y:auto; max-height:200px;">
-        <p style="margin:0 0 10px 0; color:#666; font-size:14px;">Click a question:</p>
-        <button onclick="addStaticMessage('What services do you offer?', 'We offer Individual, Relationship, Life Transitions, Leadership, and Pre-Marital Coaching.')" style="width:100%; margin-bottom:8px; padding:8px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:5px; cursor:pointer; text-align:left;">
-          What services do you offer?
-        </button>
-       <button onclick="addStaticMessage('What are your prices?', 'Our coaching sessions range from a complimentary consultation to $600 for a package.')" style="width:100%; margin-bottom:8px; padding:8px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:5px; cursor:pointer; text-align:left;">
-          What are your prices?
-        </button>
-        <button onclick="addStaticMessage('Are payment plans offered?', 'Yes! At Evolve | Connection Coaching, I want coaching to be accessible and sustainable. Flexible payment plans are available for most coaching packages. Let\'s discuss a plan that works for you during your free consultation.')" style="width:100%; margin-bottom:8px; padding:8px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:5px; cursor:pointer; text-align:left;">
-          Are payment plans offered?
-        </button>
-        <button onclick="addStaticMessage('Is sliding scale or equity-based pricing offered?', 'I believe in equity and accessibility. A limited number of sliding scale slots may be available each quarter for those with financial need. If cost is a barrier, please reach out—we\'re happy to explore options together.')" style="width:100%; margin-bottom:8px; padding:8px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:5px; cursor:pointer; text-align:left;">
-          Is sliding scale pricing offered?
-        </button>
-        <button onclick="addStaticMessage('Is insurance accepted?', 'Coaching is not a medical or clinical service, so insurance does not cover it. However, coaching is often an empowering complement to therapy and personal development work. We\'re happy to help you find the right balance of support that fits your needs.')" style="width:100%; margin-bottom:8px; padding:8px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:5px; cursor:pointer; text-align:left;">
-          Is insurance accepted?
-        </button>
-        <button onclick="addStaticMessage('What is your cancellation policy?', 'We ask for at least 24 hours\' notice if you need to cancel or reschedule a session. If a session is canceled with less than 24 hours\' notice, a 50% fee may apply. No-shows or same-day cancellations may be charged the full session fee.')" style="width:100%; margin-bottom:8px; padding:8px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:5px; cursor:pointer; text-align:left;">
-          What is your cancellation policy?
-        </button>
-        <button onclick="addStaticMessage('How can I contact you?', 'You can reach us at evolveconnectioncoaching@gmail.com.')" style="width:100%; margin-bottom:8px; padding:8px; background-color:#f0f0f0; border:1px solid #ddd; border-radius:5px; cursor:pointer; text-align:left;">
-          How can I contact you?
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- No-dependencies Function - Will be inlined -->
-  <script>
-    // Ultra simple function with no dependencies
-    function addStaticMessage(question, answer) {
-      var container = document.getElementById('static-chat-msgs');
-      
-      // Add user question
-      var questionDiv = document.createElement('div');
-      questionDiv.style.backgroundColor = '#8a56b5';
-      questionDiv.style.color = 'white';
-      questionDiv.style.padding = '10px';
-      questionDiv.style.marginBottom = '10px';
-      questionDiv.style.borderRadius = '10px';
-      questionDiv.style.maxWidth = '80%';
-      questionDiv.style.marginLeft = 'auto';
-      questionDiv.style.textAlign = 'right';
-      questionDiv.textContent = question;
-      container.appendChild(questionDiv);
-      
-      // Add bot answer after short delay
-      setTimeout(function() {
-        var answerDiv = document.createElement('div');
-        answerDiv.style.backgroundColor = '#f0f0f0';
-        answerDiv.style.padding = '10px';
-        answerDiv.style.marginBottom = '10px';
-        answerDiv.style.borderRadius = '10px';
-        answerDiv.style.maxWidth = '80%';
-        answerDiv.textContent = answer;
-        container.appendChild(answerDiv);
-        
-        // Scroll to bottom
-        container.scrollTop = container.scrollHeight;
-      }, 500);
-      
-      // Scroll to bottom immediately for user message
-      container.scrollTop = container.scrollHeight;
-    }
-  </script>
-  <!-- Super Simple Chat Widget Script -->
-  <script>
-    // Global functions to be called from inline event handlers
-    function showChat() {
-      document.getElementById('chat-box').style.display = 'block';
-      alert('Chat opened!');
-    }
-    
-    function hideChat() {
-      document.getElementById('chat-box').style.display = 'none';
-    }
-    
-    // Global responses
-    var chatResponses = {
-      "hi": "Hello! How can I assist you today?",
-      "hello": "Hi there! How can I help you?", 
-      "services": "We offer Individual, Relationship, Life Transitions, Leadership, and Pre-Marital Coaching.",
-      "price": "Our coaching sessions range from a complimentary consultation to $600 for a package.",
-      "contact": "You can reach us at evolveconnectioncoaching@gmail.com.",
-      "default": "Thanks for your message! We'll respond as soon as possible."
-    };
-    
-    function sendChatMessage() {
-      var userInput = document.getElementById('user-input');
-      var chatMessages = document.getElementById('chat-messages');
-      
-      var message = userInput.value.trim();
-      if (message) {
-        // Add user message
-        var userDiv = document.createElement('div');
-        userDiv.className = 'user-message';
-        userDiv.textContent = message;
-        chatMessages.appendChild(userDiv);
-        
-        // Clear input
-        userInput.value = '';
-        
-        // Determine response
-        var response = chatResponses["default"];
-        var lcMessage = message.toLowerCase();
-        
-        // Check for keywords
-        for (var key in chatResponses) {
-          if (lcMessage.includes(key)) {
-            response = chatResponses[key];
-            break;
-          }
-        }
-        
-        // Add bot response with delay
-        setTimeout(function() {
-          var botDiv = document.createElement('div');
-          botDiv.className = 'bot-message';
-          botDiv.textContent = response;
-          chatMessages.appendChild(botDiv);
-          chatMessages.scrollTop = chatMessages.scrollHeight;
-        }, 500);
-        
-        // Scroll to bottom
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-      }
-    }
-      
-      // Website content knowledge base for AI responses
-      const knowledgeBase = {
-        company: {
-          name: 'Evolve Connection Coaching',
-          tagline: 'Evolve. Heal. Transform.',
-          description: 'At Evolve Connection Coaching, we believe that deep, meaningful connections are the foundation of growth, healing, and transformation.',
-          mission: 'Our mission is to help you restore balance, clarity, and love in your life by using restorative practices that encourage self-reflection, honest communication, personal growth, and meaningful change.'
-        },
-        services: [
-          { name: 'Individual Coaching', price: '$100 - $200 per session', 
-            features: ['Self-reflection & emotional awareness', 'Identify patterns that no longer serve you', 
-                     'Cultivate self-love and confidence', 'Set intentional goals for transformation'] },
-          { name: 'Relationship Coaching', price: '$120 - $250 per session', 
-            features: ['Develop healthier communication skills', 'Navigate conflict with honesty and empathy',
-                     'Repair and restore relationships after harm', 'Build deeper emotional connections and trust'] },
-          { name: 'Life Transitions Coaching', price: '$120 - $250 per session', 
-            features: ['Find clarity in uncertain times', 'Embrace new beginnings with intention',
-                     'Process and heal from past experiences', 'Develop a roadmap for your next chapter'] },
-         { name: 'Consultation', price: 'Complimentary (30 minutes)',
-            features: ['Explore your goals and coaching needs', 'Ask questions about the coaching process',
-                     'Experience the restorative approach firsthand', 'No pressure conversation to determine fit'] },
-          { name: 'Leadership Coaching', price: '$150 - $300 per session', 
-            features: ['Lead with integrity, empathy, and accountability', 'Strengthen emotional intelligence',
-                     'Foster trust and collaboration in teams', 'Navigate difficult conversations with confidence'] },
-          { name: 'Pre-Marital Coaching', price: 'Starting at $450 (4 sessions)', 
-            features: ['Communication & active listening', 'Conflict resolution & restorative dialogue',
-                     'Values & relationship expectations', 'Family & cultural dynamics'] }
-        ],
-        danielle: {
-          name: 'Danielle Woody',
-          pronouns: 'she/her',
-          role: 'Founder and Coach at Evolve Connection Coaching',
-          experience: 'Over a decade of experience in restorative practices, student accountability, conflict resolution, and leadership development.',
-          philosophy: 'Healing begins with connection, accountability, and love—for ourselves and for those around us. Life's challenges can leave us feeling disconnected, but restoration is always possible.',
-          values: ['Restoration', 'Authenticity', 'Compassion', 'Empowerment', 'Connection'],
-          certifications: ['IIRP (International Institute for Restorative Practices)'],
-          education: 'Certified restorative practices specialist'
-        },
-        contact: 'Email: evolveconnectioncoaching@gmail.com',
-        certifications: 'Professional Certification: IIRP (International Institute for Restorative Practices)'
-      };
-      
-      // Quick answers for common questions
-      const quickResponses = {
-        'hello': 'Hello! I\'m the virtual assistant for Evolve Connection Coaching. How can I help you today?',
-        'hi': 'Hi there! I\'m the AI assistant for Evolve Connection Coaching. How can I assist you with our coaching services?',
-        'hey': 'Hey! Thanks for reaching out to Evolve Connection Coaching. How can I support you today?',
-       'cost': 'Our coaching sessions range from a complimentary consultation to $600 for a package. Individual sessions are typically $100-$300 depending on the type of coaching. Would you like details about a specific service?',
-        'price': 'Our coaching sessions range from a complimentary consultation to $600 for a package. Individual sessions are typically $100-$300 depending on the type of coaching. Would you like details about a specific service?',
-       'fees': 'At Evolve Connection Coaching, our pricing is structured to provide value while being accessible. Consultations are complimentary, while individual sessions range from $100-$300 depending on the service. Would you like specific pricing for a particular coaching service?',
-        'book': 'You can book a session by clicking on the "Book Now" button at the top of the page or by scrolling to our booking section. Would you like me to tell you more about our booking process?',
-        'schedule': 'You can schedule a session through our booking form. We offer flexible scheduling including evenings and weekends. Would you like to book a consultation?',
-        'appointment': 'Scheduling an appointment with Evolve Connection Coaching is easy! You can use our online booking system on this website, or contact us directly at evolveconnectioncoaching@gmail.com to find a time that works for you.',
-        'services': 'We offer Individual Coaching, Relationship Coaching, Life Transitions Coaching, Leadership Coaching, and Pre-Marital Coaching. We also offer a complimentary consultation. Which service would you like to know more about?',
-        'location': 'We offer both virtual sessions and in-person sessions depending on your location and preference. Virtual sessions are conducted through a secure platform.',
-        'credentials': 'Danielle Woody is certified by the International Institute for Restorative Practices (IIRP) and has over a decade of experience in restorative practices, conflict resolution, and leadership development.',
-        'restorative': 'Restorative practices focus on building healthy connections, repairing harm, and fostering growth through honest dialogue and mutual accountability. Would you like to know how this applies to our coaching approach?',
-        'contact': 'You can contact us at evolveconnectioncoaching@gmail.com or through the contact form at the bottom of the page. How would you like to get in touch?',
-        'payment': 'We accept payment through PayPal and CashApp. Payment details are provided during the booking process.',
-        'cancel': 'Our cancellation policy allows for reschedules with at least 24 hours notice. If you need to cancel or reschedule, please email us as soon as possible.',
-        'who are you': 'I\'m the AI assistant for Evolve Connection Coaching, designed to help answer your questions about our services, provide information about coaching with Danielle, and help you connect with the right resources.',
-        'what is this': 'This is the website for Evolve Connection Coaching, a professional coaching service founded by Danielle Woody that focuses on restorative practices to transform relationships and communication.',
-        'company': 'Evolve Connection Coaching is a professional coaching service that offers restorative practices to transform relationships and communication. Our mission is to help you restore balance, clarity, and love in your life.',
-        'danielle': 'Danielle Woody (she/her) is the founder and lead coach at Evolve Connection Coaching. She has over a decade of experience in restorative practices, student accountability, conflict resolution, and leadership development. Danielle is certified by the International Institute for Restorative Practices (IIRP) and believes that healing begins with connection, accountability, and love.'
-      };
-      
-      // Add direct event handler with debugging alert
-      if (chatButton) {
-        chatButton.onclick = function() {
-          alert('Button clicked!');
-          console.error('Chat button clicked');
-          if (chatContainer.style.display === 'block') {
-            chatContainer.style.display = 'none';
-          } else {
-            chatContainer.style.display = 'block';
-          }
-        };
-      } else {
-        alert('Chat button not found!');
-      }
-      
-      // Close chat window
-      closeButton.onclick = function() {
-        chatContainer.style.display = 'none';
-      };
-      
-      // Process user query and generate AI response
-      function generateResponse(query) {
-        query = query.toLowerCase();
-        
-        // First check for quick responses to common questions
-        for (const [key, response] of Object.entries(quickResponses)) {
-          if (query.includes(key)) {
-            return response;
-          }
-        }
-        
-        // Check for service-related questions
-        if (query.includes('individual') || (query.includes('personal') && query.includes('coaching'))) {
-          const service = knowledgeBase.services[0];
-          return `Our ${service.name} is priced at ${service.price}.<br><br>This includes:<br> • ${service.features.join('<br> • ')}`;
-        }
-        
-        if (query.includes('relationship') || query.includes('couple') || (query.includes('marriage') && !query.includes('premarital'))) {
-          const service = knowledgeBase.services[1];
-          return `Our ${service.name} is priced at ${service.price}.<br><br>This includes:<br> • ${service.features.join('<br> • ')}`;
-        }
-        
-        if (query.includes('transition') || query.includes('change') || query.includes('life change')) {
-          const service = knowledgeBase.services[2];
-          return `Our ${service.name} is priced at ${service.price}.<br><br>This includes:<br> • ${service.features.join('<br> • ')}`;
-        }
-        
-        if (query.includes('consultation') || query.includes('consult') || query.includes('intro')) {
-          const service = knowledgeBase.services[3];
-          return `Our ${service.name} is priced at ${service.price}.<br><br>This includes:<br> • ${service.features.join('<br> • ')}`;
-        }
-        
-        if (query.includes('leadership') || query.includes('leader') || query.includes('executive') || query.includes('management')) {
-          const service = knowledgeBase.services[4];
-          return `Our ${service.name} is priced at ${service.price}.<br><br>This includes:<br> • ${service.features.join('<br> • ')}`;
-        }
-        
-        if (query.includes('premarital') || query.includes('pre-marital') || query.includes('before marriage') || query.includes('engagement')) {
-          const service = knowledgeBase.services[5];
-          return `Our ${service.name} is priced at ${service.price}.<br><br>This includes:<br> • ${service.features.join('<br> • ')}`;
-        }
-        
-        // Who questions - about Danielle
-        if ((query.includes('who') || query.includes('tell me about')) && 
-            (query.includes('danielle') || query.includes('founder') || query.includes('coach'))) {
-          const danielle = knowledgeBase.danielle;
-          return `${danielle.name} (${danielle.pronouns}) is the ${danielle.role}. ${danielle.experience} Her coaching philosophy is that "${danielle.philosophy}" She is certified by the ${danielle.certifications[0]} and believes in the values of ${danielle.values.join(', ')}.`;
-        }
-        
-        // About Danielle with more context
-        if (query.includes('about') && (query.includes('danielle') || query.includes('founder') || query.includes('coach'))) {
-          const danielle = knowledgeBase.danielle;
-          return `${danielle.name} (${danielle.pronouns}) is the founder of Evolve Connection Coaching. She brings ${danielle.experience} Danielle believes that "${danielle.philosophy}" She holds certifications from the ${danielle.certifications[0]} and centers her coaching approach around the values of ${danielle.values.join(', ')}.`;
-        }
-        
-        if (query.includes('all') && query.includes('service')) {
-          let response = 'Here are all our coaching services:<br><br>';
-          knowledgeBase.services.forEach(service => {
-            response += `<strong>${service.name}</strong>: ${service.price}<br>`;
-          });
-          response += '<br>Which one would you like to know more about?';
-          return response;
-        }
-        
-        // What is questions - about the company
-        if ((query.includes('what') && query.includes('is')) && 
-            (query.includes('evolve') || query.includes('this') || query.includes('website') || query.includes('company'))) {
-          const company = knowledgeBase.company;
-          return `This is ${company.name}, a professional coaching service with the tagline "${company.tagline}" ${company.description} ${company.mission}`;
-        }
-        
-        // General information about the company
-        if ((query.includes('about') || query.includes('mission')) && 
-            (query.includes('company') || query.includes('evolve') || query.includes('coaching'))) {
-          return `${knowledgeBase.company.name} is focused on ${knowledgeBase.company.tagline} ${knowledgeBase.company.description} Our mission is: ${knowledgeBase.company.mission}`;
-        }
-        
-        // Default response when no specific match is found
-        return "I'd be happy to help with that. Could you provide a bit more detail about what you're looking for? You can ask about our services, pricing, booking process, or about Danielle's approach to coaching.";
-      }
-      
-      // Handle sending messages
-      function sendMessage() {
-        const message = chatInput.value.trim();
-        if (message) {
-          // Add user message
-          const userMessageDiv = document.createElement('div');
-          userMessageDiv.classList.add('message', 'user');
-          userMessageDiv.innerHTML = `<p>${message}</p>`;
-          chatMessages.appendChild(userMessageDiv);
-          
-          // Clear input
-          chatInput.value = '';
-          
-          // Scroll to bottom
-          chatMessages.scrollTop = chatMessages.scrollHeight;
-          
-          // Show thinking indicator
-          const thinkingDiv = document.createElement('div');
-          thinkingDiv.classList.add('message', 'bot', 'thinking');
-          thinkingDiv.innerHTML = `<p>Thinking<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></p>`;
-          chatMessages.appendChild(thinkingDiv);
-          chatMessages.scrollTop = chatMessages.scrollHeight;
-          
-          // Generate AI response after a delay
-          setTimeout(function() {
-            // Remove thinking indicator
-            chatMessages.removeChild(thinkingDiv);
-            
-            // Generate and display response
-            const response = generateResponse(message);
-            const botMessageDiv = document.createElement('div');
-            botMessageDiv.classList.add('message', 'bot');
-            botMessageDiv.innerHTML = `<p>${response}</p>`;
-            chatMessages.appendChild(botMessageDiv);
-            
-            // Scroll to bottom again
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-          }, 1000);
-        }
-      }
-      
-      // Send message on button click
-      sendButton.onclick = sendMessage;
-      
-      // Send message on Enter key
-      chatInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-          sendMessage();
-        }
-      });
-      
-      // Animate thinking dots
-      setInterval(function() {
-        const dots = document.querySelectorAll('.thinking .dot');
-        dots.forEach(dot => {
-          dot.style.opacity = Math.random() > 0.5 ? 1 : 0.3;
-        });
-      }, 300);
-    });
-  </script>
-
-  <style>
-    /* Chat widget styles */
-    #simple-chat {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1000;
-      font-family: Arial, sans-serif;
-    }
-    
-    #chat-btn {
-      background-color: #8a56b5;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      padding: 12px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-    
-    #chat-box {
-      position: absolute;
-      bottom: 70px;
-      right: 0;
-      width: 300px;
-      background-color: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      display: flex;
-      flex-direction: column;
-      max-height: 400px;
-      border: 1px solid #ddd;
-    }
-    
-    #chat-header {
-      background-color: #8a56b5;
-      color: white;
-      padding: 12px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-weight: bold;
-    }
-    
-    #close-btn {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    
-    #chat-messages {
-      flex: 1;
-      padding: 15px;
-      overflow-y: auto;
-      max-height: 280px;
-      background-color: #f9f9f9;
-    }
-    
-    .bot-message, .user-message {
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 10px;
-      max-width: 80%;
-    }
-    
-    .bot-message {
-      background-color: #f0f0f0;
-      align-self: flex-start;
-      margin-right: auto;
-    }
-    
-    .user-message {
-      background-color: #8a56b5;
-      color: white;
-      align-self: flex-end;
-      margin-left: auto;
-      text-align: right;
-    }
-    
-    #chat-controls {
-      display: flex;
-      padding: 10px;
-      border-top: 1px solid #ddd;
-    }
-    
-    #user-input {
-      flex: 1;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      margin-right: 5px;
-    }
-    
-    #send-btn {
-      background-color: #8a56b5;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      padding: 10px 15px;
-      cursor: pointer;
-    }
-  </style>
-  <script>
-    // Enhanced PayPal integration with session pricing
-    document.addEventListener('DOMContentLoaded', function() {
-      const paymentMethodSelect = document.getElementById('payment-method');
-      const sessionTypeSelect = document.getElementById('session-type');
-      const paypalContainer = document.getElementById('paypal-button-container');
-      const bookingForm = document.querySelector('.booking-form form');
-      const businessEmail = 'evolveconnectioncoaching@gmail.com';
-      const paypalEmail = 'daniellempettigrew@gmail.com';
-      
-      // Session type price mapping (using minimum prices for fixed amounts)
-      const sessionPrices = {
-        'consultation': 0,
-        'individual': 100,
-        'relationship': 120,
-        'transitions': 120,
-        'leadership': 150,
-        'premarital': 450
-      };
-      
-      // Hide PayPal container initially
-      if (paypalContainer) {
-        paypalContainer.style.display = 'none';
-      }
-      
-      // Show/hide payment fields based on payment method
-      if (paymentMethodSelect) {
-        paymentMethodSelect.addEventListener('change', function() {
-          const paypalEmailField = document.getElementById('paypal-email-field');
-          const paymentUsernameField = document.getElementById('payment-username-field');
-          const paymentUsernameLabel = document.getElementById('payment-username-label');
-          
-          // Hide all payment-specific fields first
-          if (paypalEmailField) paypalEmailField.style.display = 'none';
-          if (paymentUsernameField) paymentUsernameField.style.display = 'none';
-          
-          // Show relevant fields based on payment method
-          if (this.value === 'paypal' && paypalEmailField) {
-            paypalEmailField.style.display = 'block';
-          } else if ((this.value === 'cashapp' || this.value === 'venmo') && paymentUsernameField) {
-            paymentUsernameField.style.display = 'block';
-            paymentUsernameLabel.textContent = 'Your ' + (this.value === 'cashapp' ? 'CashApp' : 'Venmo') + ' Username';
-          }
-        });
-      }
-      
-      // Handle form submission
-      if (bookingForm) {
-        bookingForm.addEventListener('submit', function(event) {
-          event.preventDefault();
-          
-          // Get form data
-          const name = document.getElementById('name').value;
-          const email = document.getElementById('email').value;
-          const phone = document.getElementById('phone').value;
-          const sessionType = sessionTypeSelect.value;
-          const message = document.getElementById('message').value;
-          const paymentMethod = paymentMethodSelect.value;
-          const paypalUserEmail = document.getElementById('paypal-user-email') ? 
-                                 document.getElementById('paypal-user-email').value : '';
-          
-          // Validate form
-          if (!sessionType) {
-            alert('Please select a session type.');
-            return;
-          }
-          
-          if (!paymentMethod) {
-            alert('Please select a payment method.');
-            return;
-          }
-          
-          if (paymentMethod === 'paypal' && !paypalUserEmail) {
-            alert('Please enter your PayPal email address for verification.');
-            return;
-          }
-          
-          // Get session price
-          const sessionPrice = sessionPrices[sessionType] || 30;
-          
-          // Handle PayPal payment
-          if (paymentMethod === 'paypal') {
-            // Construct PayPal URL with amount and session information
-            const formData = new URLSearchParams();
-            formData.append('cmd', '_xclick');
-            formData.append('business', paypalEmail);
-            formData.append('item_name', `Evolve Coaching - ${sessionTypeSelect.options[sessionTypeSelect.selectedIndex].text}`);
-            formData.append('amount', sessionPrice);
-            formData.append('currency_code', 'USD');
-            formData.append('return', window.location.href);
-            formData.append('cancel_return', window.location.href);
-            
-            // Optional: try to pass customer data in custom field
-            formData.append('custom', JSON.stringify({
-              name: name,
-              email: email,
-              phone: phone,
-              message: message,
-              paypalEmail: paypalUserEmail
-            }));
-            
-            // Send email notification
-            try {
-              // In a real implementation, this would be handled by a backend
-              // As a fallback, we'll open a mailto link for the user
-              const mailtoSubject = encodeURIComponent(`New Booking Request: ${sessionTypeSelect.options[sessionTypeSelect.selectedIndex].text}`);
-              const mailtoBody = encodeURIComponent(
-                `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nSession: ${sessionTypeSelect.options[sessionTypeSelect.selectedIndex].text}\nPayment: PayPal (${paypalUserEmail})\n\nMessage:\n${message}`
-              );
-              
-              // Open new window for PayPal
-              window.open(`https://www.paypal.com/cgi-bin/webscr?${formData.toString()}`, '_blank');
-              
-              // Open email client in a new window
-              window.open(`mailto:${businessEmail}?subject=${mailtoSubject}&body=${mailtoBody}`, '_blank');
-            } catch (error) {
-              console.error('Error:', error);
-              alert('Payment initiated. Please also contact us at ' + businessEmail + ' with your booking details.');
-              window.open(`https://www.paypal.com/cgi-bin/webscr?${formData.toString()}`, '_blank');
-            }
-          } else if (paymentMethod === 'cashapp') {
-            // Handle CashApp selection
-            alert('Please contact us at ' + businessEmail + ' to complete your CashApp payment.');
-            
-            // Try to send email notification
-            const mailtoSubject = encodeURIComponent(`New Booking Request: ${sessionTypeSelect.options[sessionTypeSelect.selectedIndex].text}`);
-            const mailtoBody = encodeURIComponent(
-              `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nSession: ${sessionTypeSelect.options[sessionTypeSelect.selectedIndex].text}\nPayment: CashApp\n\nMessage:\n${message}`
-            );
-            
-            window.open(`mailto:${businessEmail}?subject=${mailtoSubject}&body=${mailtoBody}`, '_blank');
-          }
-        });
-      }
-    });
-  </script>
-  
-  <style>
-    /* Import Fonts */
-    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
-
-    /* Global Variables */
-    :root {
-      --primary-color: #8a56b5;
-      --primary-color-light: #a174c4;
-      --secondary-color: #eee6f3;
-      --secondary-color-light: #f6f1fa;
-      --text-color: #333;
-      --light-text: #666;
-      --dark-bg: #3a2347;
-      --heading-font: 'Cormorant Garamond', serif;
-      --body-font: 'Montserrat', sans-serif;
-      --transition: all 0.3s ease;
-      --border-radius: 4px;
-      --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      --mobile-padding: 15px;
-    }
-
-    /* Base Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: var(--body-font);
-      color: var(--text-color);
-      line-height: 1.6;
-      background-color: #fff;
-      overflow-x: hidden;
-      font-size: 16px;
-      font-weight: 300;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      font-family: var(--heading-font);
-      font-weight: 400;
-      margin-bottom: 1rem;
-      line-height: 1.2;
-      color: var(--text-color);
-    }
-
-    h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    h3 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      margin-bottom: 1rem;
-      color: var(--light-text);
-      line-height: 1.7;
-    }
-
-    a {
-      text-decoration: none;
-      color: var(--primary-color);
-      transition: var(--transition);
-    }
-
-    a:hover {
-      color: #7a45a0;
-    }
-
-    ul, ol {
-      margin-left: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    li {
-      margin-bottom: 0.5rem;
-      color: var(--light-text);
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* Utility Classes */
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 15px;
-    }
-
-    .section {
-      padding: 80px 0;
-      position: relative;
-    }
-
-    .section:nth-child(even) {
-      background-color: rgba(138, 86, 181, 0.03);
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 50px;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      border-radius: var(--border-radius);
-      background-color: var(--primary-color);
-      color: white;
-      font-weight: 500;
-      text-align: center;
-      cursor: pointer;
-      transition: var(--transition);
-      margin-top: 20px;
-      border: none;
-      font-family: var(--body-font);
-      font-size: 0.95rem;
-      letter-spacing: 0.5px;
-    }
-
-    .btn:hover {
-      background-color: #7a45a0;
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .btn-full {
-      width: 100%;
-    }
-
-    /* Scroll Top Button */
-    .scroll-top {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 45px;
-      height: 45px;
-      background-color: var(--primary-color);
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 99;
-      opacity: 0;
-      visibility: hidden;
-      transition: var(--transition);
-      box-shadow: var(--box-shadow);
-    }
-
-    .scroll-top.active {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    /* Mobile Menu */
-    .mobile-menu {
-      position: fixed;
-      top: 0;
-      right: -300px;
-      width: 300px;
-      height: 100vh;
-      background-color: white;
-      z-index: 1001;
-      padding: 50px 20px;
-      transition: var(--transition);
-      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.05);
-    }
-
-    .mobile-menu.active {
-      right: 0;
-      z-index: 1100;
-    }
-
-    .mobile-menu-close {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: none;
-      color: var(--text-color);
-      border: none;
-      font-size: 1.3rem;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
-
-    .mobile-menu-links {
-      display: flex;
-      flex-direction: column;
-      margin-top: 50px;
-    }
-
-    .mobile-menu-links a {
-      color: var(--text-color);
-      font-size: 1rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      font-weight: 400;
-      transition: var(--transition);
-      padding: 12px 0;
-      border-bottom: 1px solid #f1f1f1;
-      text-align: center;
-    }
-
-    .mobile-menu-links a:hover {
-      color: var(--primary-color);
-    }
-
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 1000;
-      opacity: 0;
-      visibility: hidden;
-      transition: var(--transition);
-    }
-
-    .overlay.active {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    /* Header */
-    .header {
-      padding: 15px 0;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 100;
-      background-color: white;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
-      transition: var(--transition);
-      overflow: visible;
-    }
-
-    .header.scrolled {
-      padding: 8px 0;
-      background-color: white;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    .nav-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: auto;
-      min-height: 70px;
-      padding: 10px 0;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      font-family: var(--heading-font);
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--primary-color);
-      height: 100%;
-    }
-
-    .logo img {
-      height: 120px;
-      width: auto;
-      max-width: 500px;
-    }
-
-    .nav-links {
-      display: none;
-    }
-
-    .mobile-menu-btn {
-      display: block;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      color: var(--text-color);
-      cursor: pointer;
-      padding: 10px;
-      margin-left: auto;
-    }
-
-    /* Hero Section */
-    .hero {
-      height: 100vh;
-      min-height: 600px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: relative;
-      background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.85)), url('hero-bg.jpg') center/cover no-repeat;
-      background-color: rgba(138, 86, 181, 0.05);
-      margin-top: 0;
-      padding-top: 150px; /* Further increased to ensure no cutoff on mobile */
-      overflow: hidden; /* Ensure circles don't cause horizontal scrolling */
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      color: var(--text-color);
-      max-width: 800px;
-      padding: 0 20px;
-    }
-
-    .hero-title {
-      font-size: 3.5rem;
-      margin-bottom: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .hero-subtitle {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-      opacity: 0.9;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .hero-cta {
-      display: inline-block;
-      padding: 15px 30px;
-      background-color: var(--primary-color);
-      color: white;
-      border-radius: var(--border-radius);
-      font-weight: 500;
-      letter-spacing: 0.5px;
-      transition: var(--transition);
-      font-size: 1rem;
-    }
-
-    .hero-cta:hover {
-      background-color: #7a45a0;
-      color: white;
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    /* About Section */
-    .about-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .about-content h2 {
-      margin-bottom: 20px;
-      color: var(--primary-color);
-    }
-
-    .about-content p {
-      margin-bottom: 20px;
-    }
-
-    .about-values {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 30px;
-    }
-
-    .value-tag {
-      padding: 8px 15px;
-      background-color: var(--secondary-color);
-      border-radius: 30px;
-      color: var(--primary-color);
-      font-weight: 500;
-      font-size: 0.9rem;
-    }
-
-    .about-image {
-      position: relative;
-      border-radius: var(--border-radius);
-      overflow: hidden;
-      box-shadow: var(--box-shadow);
-    }
-
-    .about-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-      transition: var(--transition);
-    }
-
-    .about-image:hover img {
-      transform: scale(1.03);
-    }
-
-    /* Services Section */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 30px;
-      margin-bottom: 40px;
-    }
-
-    .service-card {
-      background-color: white;
-      border-radius: var(--border-radius);
-      overflow: hidden;
-      box-shadow: var(--box-shadow);
-      transition: var(--transition);
-      border: 1px solid #f0f0f0;
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-      border-color: var(--secondary-color);
-    }
-
-    .service-card-content {
-      padding: 25px;
-    }
-
-    .service-card-content h3 {
-      margin-bottom: 10px;
-      color: var(--primary-color);
-    }
-
-    .service-price {
-      font-weight: 500;
-      margin-bottom: 20px;
-      color: var(--text-color);
-      font-size: 0.95rem;
-    }
-
-    .service-features {
-      margin-bottom: 25px;
-    }
-
-    .service-feature {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-
-    .service-feature i {
-      color: var(--primary-color);
-      font-size: 0.9rem;
-      margin-top: 5px;
-    }
-
-    /* Testimonials Section */
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 30px;
-    }
-
-    .testimonial-card {
-      background-color: white;
-      border-radius: var(--border-radius);
-      padding: 30px;
-      box-shadow: var(--box-shadow);
-      transition: var(--transition);
-      border: 1px solid #f0f0f0;
-    }
-
-    .testimonial-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-      border-color: var(--secondary-color);
-    }
-
-    .testimonial-text {
-      font-style: italic;
-      margin-bottom: 20px;
-      position: relative;
-      padding-top: 25px;
-      color: var(--light-text);
-    }
-
-    .testimonial-text::before {
-      content: '"';
-      position: absolute;
-      top: -10px;
-      left: -5px;
-      font-size: 4rem;
-      color: var(--secondary-color);
-      font-family: serif;
-      opacity: 0.8;
-    }
-
-    .testimonial-author strong {
-      display: block;
-      margin-bottom: 5px;
-      color: var(--primary-color);
-      font-weight: 500;
-    }
-
-    /* Workshops Section */
-    .workshop-container {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-
-    .workshop-card {
-      background-color: white;
-      border-radius: var(--border-radius);
-      overflow: hidden;
-      box-shadow: var(--box-shadow);
-      transition: var(--transition);
-      border: 1px solid #f0f0f0;
-    }
-
-    .workshop-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-      border-color: var(--secondary-color);
-    }
-
-    .workshop-card-content {
-      padding: 30px;
-    }
-
-    .workshop-date {
-      display: inline-block;
-      font-weight: 500;
-      margin-bottom: 15px;
-      color: var(--primary-color);
-      background-color: var(--secondary-color);
-      padding: 5px 12px;
-      border-radius: 4px;
-      font-size: 0.9rem;
-    }
-
-    .workshop-card-content h3 {
-      margin-bottom: 15px;
-      color: var(--primary-color);
-    }
-
-    .workshop-card-content p {
-      margin-bottom: 15px;
-    }
-
-    .workshop-card-content ul {
-      margin-bottom: 20px;
-    }
-
-    /* FAQ Section */
-    .faq-container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .accordion-item {
-      background-color: white;
-      border-radius: var(--border-radius);
-      margin-bottom: 15px;
-      box-shadow: var(--box-shadow);
-      overflow: hidden;
-      border: 1px solid #f0f0f0;
-    }
-
-    .accordion-header {
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      transition: var(--transition);
-    }
-
-    .accordion-header:hover {
-      background-color: rgba(138, 86, 181, 0.05);
-    }
-
-    .accordion-header h3 {
-      margin: 0;
-      font-size: 1.1rem;
-      font-weight: 400;
-      color: var(--text-color);
-    }
-
-    .accordion-header i {
-      color: var(--primary-color);
-      transition: var(--transition);
-    }
-
-    .accordion-item.active .accordion-header i {
-      transform: rotate(45deg);
-    }
-
-    .accordion-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-    }
-
-    .accordion-item.active .accordion-content {
-      max-height: 500px;
-    }
-
-    .accordion-content-inner {
-      padding: 0 20px 20px 20px;
-    }
-
-    /* Booking Section */
-    .booking-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-    }
-
-    .booking-info h3 {
-      margin-bottom: 20px;
-      color: var(--primary-color);
-    }
-
-    .booking-info ul {
-      margin-bottom: 30px;
-      list-style: none;
-      margin-left: 0;
-    }
-
-    .booking-info li {
-      display: flex;
-      align-items: flex-start;
-      gap: 15px;
-      margin-bottom: 15px;
-    }
-
-    .booking-info li i {
-      color: var(--primary-color);
-      margin-top: 5px;
-    }
-
-    .pricing-box {
-      background-color: var(--secondary-color);
-      padding: 25px;
-      border-radius: var(--border-radius);
-      margin-top: 20px;
-    }
-
-    .pricing-box h4 {
-      margin-bottom: 15px;
-      color: var(--primary-color);
-    }
-
-    .pricing-box p {
-      margin-bottom: 20px;
-      font-size: 0.95rem;
-    }
-
-    .pricing-item {
-      display: flex;
-      justify-content: space-between;
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    }
-
-    .pricing-item:last-child {
-      border-bottom: none;
-    }
-
-    .booking-form {
-      background-color: white;
-      padding: 30px;
-      border-radius: var(--border-radius);
-      box-shadow: var(--box-shadow);
-      border: 1px solid #f0f0f0;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 500;
-      color: var(--text-color);
-      font-size: 0.95rem;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px 15px;
-      border: 1px solid #e1e1e1;
-      border-radius: var(--border-radius);
-      background-color: white;
-      font-family: var(--body-font);
-      font-size: 1rem;
-      transition: var(--transition);
-    }
-
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--primary-color);
-      outline: none;
-      box-shadow: 0 0 0 2px rgba(148, 164, 137, 0.1);
-    }
-
-    .form-group textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    /* Newsletter Section */
-    .newsletter {
-      background-color: var(--primary-color);
-      padding: 60px 0;
-      color: white;
-      text-align: center;
-    }
-
-    .newsletter-container {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .newsletter h2 {
-      font-size: 2rem;
-      margin-bottom: 15px;
-      color: white;
-    }
-
-    .newsletter p {
-      margin-bottom: 30px;
-      color: rgba(255, 255, 255, 0.9);
-    }
-
-    .newsletter-form {
-      display: flex;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    .newsletter-form input {
-      flex: 1;
-      padding: 15px;
-      border: none;
-      border-radius: var(--border-radius) 0 0 var(--border-radius);
-      font-size: 1rem;
-      font-family: var(--body-font);
-    }
-
-    .newsletter-form input:focus {
-      outline: none;
-    }
-
-    .newsletter-form button {
-      padding: 0 25px;
-      background-color: var(--dark-bg);
-      color: white;
-      border: none;
-      border-radius: 0 var(--border-radius) var(--border-radius) 0;
-      font-weight: 500;
-      cursor: pointer;
-      transition: var(--transition);
-      font-family: var(--body-font);
-    }
-
-    .newsletter-form button:hover {
-      background-color: #243235;
-    }
-
-    /* Contact Section */
-    .contact-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-    }
-
-    .contact-info h3 {
-      margin-bottom: 20px;
-      color: var(--primary-color);
-    }
-
-    .contact-method {
-      display: flex;
-      align-items: flex-start;
-      gap: 15px;
-      margin-bottom: 25px;
-    }
-
-    .contact-method i {
-      width: 40px;
-      height: 40px;
-      background-color: var(--secondary-color);
-      color: var(--primary-color);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 5px;
-    }
-
-    .contact-method p {
-      margin-bottom: 5px;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .social-link {
-      width: 40px;
-      height: 40px;
-      background-color: var(--secondary-color);
-      color: var(--primary-color);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: var(--transition);
-    }
-
-    .social-link:hover {
-      background-color: var(--primary-color);
-      color: white;
-      transform: translateY(-3px);
-    }
-
-    .contact-form {
-      background-color: white;
-      padding: 30px;
-      border-radius: var(--border-radius);
-      box-shadow: var(--box-shadow);
-      border: 1px solid #f0f0f0;
-    }
-
-    /* Footer */
-    footer {
-      background-color: var(--dark-bg);
-      color: white;
-      padding: 60px 0 0;
-    }
-
-    .footer-container {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 30px;
-      margin-bottom: 30px;
-    }
-
-    .footer-about h3 {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-      color: white;
-    }
-
-    .footer-about p {
-      color: rgba(255, 255, 255, 0.7);
-      margin-bottom: 20px;
-      font-size: 0.95rem;
-    }
-
-    .footer-logo-symbol {
-      font-size: 6.5rem;
-      color: var(--primary-color);
-      margin-top: 10px;
-      display: inline-block;
-    }
-
-    .footer-links h4 {
-      font-size: 1.2rem;
-      color: white;
-      margin-bottom: 20px;
-    }
-
-    .footer-links ul {
-      list-style: none;
-      margin-left: 0;
-    }
-
-    .footer-links li {
-      margin-bottom: 12px;
-    }
-
-    .footer-links a {
-      color: rgba(255, 255, 255, 0.7);
-      transition: var(--transition);
-    }
-
-    .footer-links a:hover {
-      color: var(--primary-color);
-      padding-left: 5px;
-    }
-
-    .footer-bottom {
-      text-align: center;
-      padding: 20px 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      color: rgba(255, 255, 255, 0.6);
-      font-size: 0.9rem;
-    }
-
-    /* Hero circles animation */
-    .hero-circles {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      z-index: 1;
-    }
-
-    .circle {
-      position: absolute;
-      border-radius: 50%;
-      background-color: rgba(138, 86, 181, 0.1);
-    }
-
-    .circle-1 {
-      width: 300px;
-      height: 300px;
-      top: -50px;
-      left: -50px;
-    }
-
-    .circle-2 {
-      width: 500px;
-      height: 500px;
-      bottom: -100px;
-      right: -100px;
-    }
-
-    .circle-3 {
-      width: 200px;
-      height: 200px;
-      top: 30%;
-      right: 10%;
-    }
-
-    /* Media Queries - Improved Responsiveness */
-    @media (max-width: 1024px) {
-      .hero-title {
-        font-size: 3rem;
-      }
-      
-      .footer-container {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-      }
-      
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    /* Tablet Styles */
-    @media (max-width: 768px) {
-      html {
-        font-size: 15px;
-      }
-
-      .section {
-        padding: 60px 0;
-      }
-      
-      .about-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-      
-      .booking-container,
-      .contact-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-      
-      .footer-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-
-      .hero-title {
-        font-size: 2.5rem;
-      }
-      
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .testimonial-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      /* Adjust logo size for mobile */
-      .logo img {
-        width: 150px;
-        height: auto;
-        max-height: 60px;
-      }
-      
-      /* Fix header spacing on mobile */
-      .nav-container {
-        height: auto;
-        min-height: 70px;
-        padding: 5px 0;
-      }
-      
-      /* Better spacing for mobile forms */
-      .form-group {
-        margin-bottom: 18px;
-      }
-      
-      .form-group input, 
-      .form-group select, 
-      .form-group textarea {
-        padding: 14px;
-        font-size: 16px; /* Prevents zoom on iOS */
-        border-radius: 8px;
-      }
-      
-      /* Improve mobile tap targets */
-      .btn, .nav-link, .mobile-menu-links a {
-        padding: 14px 22px;
-      }
-      
-      .mobile-menu-links a {
-        font-size: 16px;
-        padding: 15px 0;
-        margin-bottom: 5px;
-        border-bottom: 1px solid var(--secondary-color-light);
-        font-weight: 400;
-      }
-      
-      /* Improve mobile menu */
-      .mobile-menu {
-        width: 280px;
-        padding: 60px 20px;
-        background: white;
-      }
-      
-      /* More space between service cards on mobile */
-      .service-card {
-        margin-bottom: 20px;
-      }
-      
-      /* Improve hero section for mobile */
-      .hero-content {
-        padding: 0 15px;
-        margin-top: -20px;
-      }
-      
-      .hero-description p {
-        margin-bottom: 25px;
-        font-size: 16px;
-        line-height: 1.7;
-      }
-      
-      .hero-cta {
-        padding: 16px 30px;
-        font-size: 16px;
-      }
-    }
-
-    /* Mobile Phone Styles */
-    @media (max-width: 480px) {
-      html {
-        font-size: 14px;
-      }
-      
-      body {
-        overflow-x: hidden;
-      }
-
-      .header {
-        padding: 5px 0;
-        height: auto;
-      }
-      
-      .container {
-        width: 95%;
-        padding: 0 var(--mobile-padding);
-      }
-      
-      /* Fix the hero section margin for mobile */
-      .hero {
-        padding-top: 110px;
-        margin-top: 30px;
-      }
-      
-      .section {
-        padding: 40px 0;
-      }
-
-      .hero-title {
-        font-size: 2.2rem;
-        margin-bottom: 12px;
-      }
-      
-      .hero-subtitle {
-        font-size: 1.1rem;
-        margin-bottom: 20px;
-      }
-      
-      .section-header h2 {
-        font-size: 1.9rem;
-        margin-bottom: 15px;
-      }
-      
-      .section-header p {
-        font-size: 16px;
-        line-height: 1.7;
-        padding: 0 5px;
-      }
-      
-      /* Improve newsletter form */
-      .newsletter {
-        padding: 50px 0;
-      }
-      
-      .newsletter h2 {
-        font-size: 1.8rem;
-        margin-bottom: 15px;
-      }
-      
-      .newsletter p {
-        margin-bottom: 25px;
-        padding: 0 10px;
-      }
-      
-      .newsletter-form {
-        flex-direction: column;
-        width: 100%;
-      }
-      
-      .newsletter-form input {
-        border-radius: 8px;
-        margin-bottom: 12px;
-        padding: 16px;
-        width: 100%;
-        font-size: 16px;
-      }
-      
-      .newsletter-form button {
-        border-radius: 8px;
-        padding: 16px;
-        width: 100%;
-        background-color: var(--dark-bg);
-        font-size: 16px;
-        font-weight: 600;
-      }
-      
-      /* Make buttons more prominent and attractive on mobile */
-      .btn {
-        display: block;
-        width: 100%;
-        padding: 16px;
-        font-size: 16px;
-        font-weight: 600;
-        border-radius: 8px;
-        background: linear-gradient(to right, var(--primary-color), var(--primary-color-light));
-        box-shadow: 0 4px 10px rgba(138, 86, 181, 0.3);
-      }
-      
-      /* Enhance service cards for mobile */
-      .service-card, 
-      .testimonial-card, 
-      .workshop-card {
-        padding: 0;
-        margin-bottom: 25px;
-        border-radius: 12px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-        border: none;
-      }
-      
-      .service-card-content, 
-      .workshop-card-content {
-        padding: 20px;
-      }
-      
-      .service-card-content h3,
-      .workshop-card-content h3 {
-        font-size: 1.4rem;
-        margin-bottom: 12px;
-      }
-      
-      .service-price {
-        font-weight: 600;
-        font-size: 1rem;
-        margin-bottom: 18px;
-      }
-      
-      .service-feature {
-        margin-bottom: 15px;
-      }
-      
-      .service-feature i {
-        color: var(--primary-color);
-        font-size: 1rem;
-      }
-      
-      .service-feature span {
-        font-size: 15px;
-      }
-      
-      /* Improve testimonials for mobile */
-      .testimonial-card {
-        padding: 25px 20px;
-      }
-      
-      .testimonial-text {
-        font-size: 16px;
-        line-height: 1.7;
-      }
-      
-      /* Improve readability of all text on mobile */
-      p {
-        font-size: 16px;
-        line-height: 1.7;
-      }
-      
-      /* Adjust spacing and sizing for hero section on mobile */
-      .hero {
-        min-height: 520px;
-        padding-top: 80px;
-        height: auto;
-        padding-bottom: 50px;
-      }
-      
-      .hero-content {
-        padding: 0 15px;
-      }
-      
-      .hero-description p {
-        font-size: 16px;
-        line-height: 1.7;
-        margin-bottom: 25px;
-        padding: 0 5px;
-      }
-      
-      .hero-cta {
-        padding: 16px 30px;
-        font-size: 16px;
-        font-weight: 600;
-        border-radius: 8px;
-        background: linear-gradient(to right, var(--primary-color), var(--primary-color-light));
-        box-shadow: 0 4px 10px rgba(138, 86, 181, 0.3);
-      }
-      
-      /* Enhance accordion on mobile */
-      .accordion-item {
-        margin-bottom: 15px;
-        border-radius: 10px;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-      }
-      
-      .accordion-header {
-        padding: 18px 15px;
-      }
-      
-      .accordion-header h3 {
-        font-size: 1.1rem;
-        line-height: 1.5;
-        padding-right: 10px;
-      }
-      
-      .accordion-content-inner {
-        padding: 0 15px 20px;
-      }
-      
-      .accordion-content-inner p {
-        font-size: 15px;
-      }
-      
-      /* Enhance form elements */
-      .form-group label {
-        font-size: 16px;
-        margin-bottom: 8px;
-      }
-      
-      .form-group input,
-      .form-group select,
-      .form-group textarea {
-        font-size: 16px;
-        padding: 15px;
-        border-radius: 8px;
-        background-color: var(--secondary-color-light);
-      }
-      
-      /* Improve booking section */
-      .booking-info li {
-        margin-bottom: 16px;
-      }
-      
-      .pricing-box {
-        padding: 22px 18px;
-        margin-top: 25px;
-        border-radius: 10px;
-      }
-      
-      .pricing-box h4 {
-        font-size: 1.2rem;
-      }
-      
-      .pricing-item {
-        padding: 12px 0;
-        font-size: 15px;
-      }
-      
-      /* Improve footer spacing on mobile */
-      footer {
-        padding: 40px 0 0;
-      }
-      
-      .footer-container {
-        gap: 25px;
-      }
-      
-      .footer-about h3 {
-        font-size: 1.4rem;
-      }
-       
-      .footer-about p {
-        font-size: 15px;
-      }
-      
-      .footer-links h4 {
-        font-size: 1.1rem;
-      }
-      
-      .footer-links a {
-        font-size: 15px;
-      }
-      
-      .footer-bottom {
-        padding: 25px 0;
-      }
-    }
-    
-    /* Touchscreen-specific enhancements */
-    @media (hover: none) {
-      /* Increase touch targets for better mobile usability */
-      .btn, 
-      .client-portal, 
-      .nav-link, 
-      .footer-links a,
-      .accordion-header,
-      .mobile-menu-links a {
-        padding: 15px 20px;
-      }
-      
-      /* Remove hover effects that don't work well on touch devices */
-      .service-card:hover,
-      .testimonial-card:hover,
-      .workshop-card:hover,
-      .about-image:hover img,
-      .social-link:hover,
-      .nav-link:hover::after {
-        transform: none;
-      }
-      
-      /* Enhance active states for touch */
-      .btn:active, 
-      .client-portal:active,
-      .hero-cta:active {
-        transform: scale(0.97);
-        opacity: 0.9;
-      }
-      
-      /* Make scroll-to-top button larger and more visible on touch devices */
-      .scroll-top {
-        width: 60px;
-        height: 60px;
-        bottom: 20px;
-        right: 20px;
-        font-size: 1.5rem;
-        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-      }
-      
-      /* Enhance mobile menu button */
-      .mobile-menu-btn, 
-      .mobile-menu-close {
-        padding: 15px;
-        font-size: 1.5rem;
-        touch-action: manipulation;
-      }
-      
-      /* Add active state to accordion */
-      .accordion-header:active {
-        background-color: var(--secondary-color-light);
-      }
-      
-      /* Make form inputs easier to tap */
-      .form-group input,
-      .form-group select,
-      .form-group textarea {
-        min-height: 48px;
-      }
-      
-      /* Ensure buttons have minimum touch size */
-      button, 
-      .btn, 
-      input[type="submit"] {
-        min-height: 48px;
-        min-width: 48px;
-      }
-    }
-    
-    /* Chat Widget Styles */
-    .chat-widget {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      z-index: 1000;
-      font-family: var(--body-font);
-    }
-    
-    .chat-button {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: var(--primary-color);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      transition: var(--transition);
-    }
-    
-    .chat-button i {
-      color: white;
-      font-size: 24px;
-    }
-    
-    .chat-button:hover {
-      transform: scale(1.05);
-      background: #7a45a0;
-    }
-    
-    .chat-container {
-      position: absolute;
-      bottom: 80px;
-      right: 0;
-      width: 320px;
-      height: 400px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      display: none;
-      flex-direction: column;
-      border: 1px solid #eee;
-    }
-    
-    .chat-header {
-      padding: 15px;
-      background: var(--primary-color);
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .chat-header h3 {
-      margin: 0;
-      font-size: 16px;
-      font-weight: 500;
-      color: white;
-    }
-    
-    .chat-close {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 20px;
-      cursor: pointer;
-    }
-    
-    .chat-body {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      height: calc(100% - 50px);
-    }
-    
-    .chat-messages {
-      flex: 1;
-      padding: 15px;
-      overflow-y: auto;
-    }
-    
-    .message {
-      margin-bottom: 15px;
-      max-width: 80%;
-    }
-    
-    .message p {
-      padding: 10px 15px;
-      border-radius: 15px;
-      margin: 0;
-      font-size: 14px;
-      line-height: 1.4;
-    }
-    
-    .message.bot {
-      align-self: flex-start;
-    }
-    
-    .message.bot p {
-      background-color: #f1f1f1;
-      color: #333;
-      border-top-left-radius: 5px;
-    }
-    
-    .message.bot.thinking p {
-      background-color: rgba(241, 241, 241, 0.5);
-    }
-    
-    .message.bot.thinking .dot {
-      display: inline-block;
-      animation: pulseDot 1.5s infinite;
-      transition: opacity 0.3s ease;
-    }
-    
-    @keyframes pulseDot {
-      0%, 100% { opacity: 0.3; }
-      50% { opacity: 1; }
-    }
-    
-    .message.user {
-      align-self: flex-end;
-      margin-left: auto;
-    }
-    
-    .message.user p {
-      background-color: var(--primary-color);
-      color: white;
-      border-top-right-radius: 5px;
-    }
-    
-    .chat-input {
-      display: flex;
-      padding: 10px;
-      border-top: 1px solid #eee;
-    }
-    
-    .chat-input input {
-      flex: 1;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 20px;
-      outline: none;
-    }
-    
-    .chat-input button {
-      width: 40px;
-      height: 40px;
-      margin-left: 10px;
-      background: var(--primary-color);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: var(--transition);
-    }
-    
-    .chat-input button:hover {
-      background: #7a45a0;
-    }
-    
-    @media (max-width: 768px) {
-      .chat-container {
-        width: 280px;
-        height: 350px;
-        bottom: 70px;
-      }
-    }
-  /* Service Categories Styles */
-  .service-category {
-    margin-bottom: 60px;
-  }
-  
-  .category-title {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    margin-bottom: 30px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--secondary-color);
-    display: inline-block;
-  }
-  
-  /* Dropdown Menu Styles */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border-radius: 5px;
-    z-index: 1001;
-    padding: 10px 0;
-    margin-top: 5px;
-    left: 0; /* Ensure it aligns with parent and doesn't overflow */
-  }
-  
-  .dropdown-content a {
-    color: var(--text-color);
-    padding: 10px 15px;
-    text-decoration: none;
-    display: block;
-    font-size: 0.9rem;
-    transition: background-color 0.3s;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: var(--secondary-color-light);
-    color: var(--primary-color);
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  /* Mobile Submenu */
-  .mobile-submenu {
-    padding-left: 15px;
-    margin: 5px 0 10px;
-  }
-  
-  .mobile-submenu-item {
-    font-size: 0.9rem !important;
-    padding: 10px 15px !important;
-    color: var(--light-text) !important;
-  }
-  
-  /* Booking tabs */
-  .booking-tabs {
-    display: flex;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .booking-tab {
-    padding: 12px 20px;
-    background: none;
-    border: none;
-    border-bottom: 2px solid transparent;
-    font-family: var(--body-font);
-    font-size: 1rem;
-    cursor: pointer;
-    transition: var(--transition);
-  }
-  
-  .booking-tab.active {
-    border-bottom: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    font-weight: 500;
-  }
-  
-  .booking-content {
-    display: none;
-  }
-  
-  .booking-content.active {
-    display: block;
-  }
-  
-  /* Certification badge styles */
-  .certification-badge {
-    display: inline-block;
-    margin-top: 20px;
-    transition: transform 0.3s ease;
-  }
-  
-  .certification-badge:hover {
-    transform: scale(1.05);
-  }
-  </style>
-
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
   <!-- Scroll Top Button -->
   <div class="scroll-top">
     <i class="fas fa-arrow-up"></i>
   </div>
-  
-  <!-- Custom Chat Widget -->
-
-  
-  <!-- Booking Tab Script -->
-  <script>
-    function switchBookingTab(tab) {
-      // Hide all content
-      document.querySelectorAll('.booking-content').forEach(content => {
-        content.classList.remove('active');
-      });
-      
-      // Deactivate all tabs
-      document.querySelectorAll('.booking-tab').forEach(tabBtn => {
-        tabBtn.classList.remove('active');
-      });
-      
-      // Activate selected tab and content
-      if (tab === 'form') {
-        document.getElementById('booking-form-container').classList.add('active');
-        document.querySelectorAll('.booking-tab')[0].classList.add('active');
-      } else {
-        document.getElementById('booking-calendar-container').classList.add('active');
-        document.querySelectorAll('.booking-tab')[1].classList.add('active');
-      }
-    }
-    
-    // Calendly payment verification
-    document.addEventListener('DOMContentLoaded', function() {
-      const verifyPaymentBtn = document.getElementById('verify-payment-btn');
-      const calendlyPaymentMethod = document.getElementById('calendly-payment-method');
-      const calendlyUsernameField = document.getElementById('calendly-payment-username-field');
-      const calendlyUsernameLabel = document.getElementById('calendly-payment-username-label');
-      
-      // Update label based on payment method
-      if (calendlyPaymentMethod) {
-        calendlyPaymentMethod.addEventListener('change', function() {
-          const paymentLabel = document.getElementById('payment-method-label');
-          if (paymentLabel) {
-            paymentLabel.textContent = 'Enter your ' + this.value + ' username';
-          }
-        });
-      }
-      
-      // Verify payment and show Calendly widget
-      if (verifyPaymentBtn) {
-        verifyPaymentBtn.addEventListener('click', function() {
-          const paymentMethod = document.getElementById('calendly-payment-method').value;
-          const paymentId = document.getElementById('calendly-payment-id').value;
-          const paymentUsername = document.getElementById('calendly-payment-username')?.value || '';
-          
-          if (!paymentMethod || !paymentId) {
-            alert('Please fill in all required payment details');
-            return;
-          }
-          
-          // Show success message and Calendly widget
-          document.getElementById('payment-verification-success').style.display = 'block';
-          document.getElementById('calendly-widget-container').style.display = 'block';
-          verifyPaymentBtn.disabled = true;
-          verifyPaymentBtn.textContent = 'Payment Verified';
-          verifyPaymentBtn.style.backgroundColor = '#4CAF50';
-          
-          // Store verification in session storage
-          sessionStorage.setItem('paymentVerified', 'true');
-          sessionStorage.setItem('paymentDetails', JSON.stringify({
-            method: paymentMethod,
-            id: paymentId,
-            username: paymentUsername
-          }));
-        });
-      }
-      
-      // Check if payment was already verified
-      if (sessionStorage.getItem('paymentVerified') === 'true') {
-        document.getElementById('payment-verification-success').style.display = 'block';
-        document.getElementById('calendly-widget-container').style.display = 'block';
-        if (verifyPaymentBtn) {
-          verifyPaymentBtn.disabled = true;
-          verifyPaymentBtn.textContent = 'Payment Verified';
-          verifyPaymentBtn.style.backgroundColor = '#4CAF50';
-        }
-        
-        // Restore saved payment method and update the label
-        const savedPaymentDetails = JSON.parse(sessionStorage.getItem('paymentDetails') || '{}');
-        if (savedPaymentDetails.method && calendlyPaymentMethod) {
-          calendlyPaymentMethod.value = savedPaymentDetails.method;
-          const paymentLabel = document.getElementById('payment-method-label');
-          if (paymentLabel) {
-            paymentLabel.textContent = 'Enter your ' + savedPaymentDetails.method + ' username';
-          }
-        }
-      }
-    });
-  </script>
-  
-  <!-- Smart Chat Widget Script -->
-  <script>
-    // Website content knowledge base for AI responses
-    const knowledgeBase = {
-      company: {
-        name: 'Evolve Connection Coaching',
-        tagline: 'Evolve. Heal. Transform.',
-        description: 'At Evolve Connection Coaching, we believe that deep, meaningful connections are the foundation of growth, healing, and transformation.',
-        mission: 'Our mission is to help you restore balance, clarity, and love in your life by using restorative practices that encourage self-reflection, honest communication, personal growth, and meaningful change.'
-      },
-      services: [
-        { name: 'Individual Coaching', price: '$100 - $200 per session', 
-          features: ['Self-reflection & emotional awareness', 'Identify patterns that no longer serve you', 
-                   'Cultivate self-love and confidence', 'Set intentional goals for transformation'] },
-        { name: 'Relationship Coaching', price: '$120 - $250 per session', 
-          features: ['Develop healthier communication skills', 'Navigate conflict with honesty and empathy',
-                   'Repair and restore relationships after harm', 'Build deeper emotional connections and trust'] },
-        { name: 'Life Transitions Coaching', price: '$120 - $250 per session', 
-          features: ['Find clarity in uncertain times', 'Embrace new beginnings with intention',
-                   'Process and heal from past experiences', 'Develop a roadmap for your next chapter'] },
-        { name: 'Consultation', price: '$30 for 30 minutes', 
-          features: ['Explore your goals and coaching needs', 'Ask questions about the coaching process',
-                   'Experience the restorative approach firsthand', 'No pressure conversation to determine fit'] },
-        { name: 'Leadership Coaching', price: '$150 - $300 per session', 
-          features: ['Lead with integrity, empathy, and accountability', 'Strengthen emotional intelligence',
-                   'Foster trust and collaboration in teams', 'Navigate difficult conversations with confidence'] },
-        { name: 'Pre-Marital Coaching', price: 'Starting at $450 (4 sessions)', 
-          features: ['Communication & active listening', 'Conflict resolution & restorative dialogue',
-                   'Values & relationship expectations', 'Family & cultural dynamics'] }
-      ],
-      danielle: {
-        name: 'Danielle Woody',
-        pronouns: 'she/her',
-        role: 'Founder and Coach at Evolve Connection Coaching',
-        experience: 'Over a decade of experience in restorative practices, student accountability, conflict resolution, and leadership development.',
-        philosophy: 'Healing begins with connection, accountability, and love—for ourselves and for those around us. Life's challenges can leave us feeling disconnected, but restoration is always possible.',
-        values: ['Restoration', 'Authenticity', 'Compassion', 'Empowerment', 'Connection'],
-        certifications: ['IIRP (International Institute for Restorative Practices)'],
-        education: 'Certified restorative practices specialist'
-      },
-      contact: 'Email: evolveconnectioncoaching@gmail.com',
-      certifications: 'Professional Certification: IIRP (International Institute for Restorative Practices)'
-    };
-    
-    // Quick answers for common questions
-    const quickResponses = {
-      'hello': 'Hello! I\'m the virtual assistant for Evolve Connection Coaching. How can I help you today?',
-      'hi': 'Hi there! I\'m the AI assistant for Evolve Connection Coaching. How can I assist you with our coaching services?',
-      'hey': 'Hey! Thanks for reaching out to Evolve Connection Coaching. How can I support you today?',
-      'cost': 'Our coaching sessions range from a complimentary consultation to $600 for a package.  Individual sessions are typically $100-$300 depending on the type of coaching. Would you like details about a specific service?',
-      'price': 'Our coaching sessions range from a complimentary consultation to $600 for a package. Individual sessions are typically $100-$300 depending on the type of coaching. Would you like details about a specific service?',
-      'fees': 'At Evolve Connection Coaching, our pricing is structured to provide value while being accessible. Consultations start at $30, while individual sessions range from $100-$300 depending on the service. Would you like specific pricing for a particular coaching service?',
-      'book': 'You can book a session by clicking on the "Book Now" button at the top of the page or by scrolling to our booking section. Would you like me to tell you more about our booking process?',
-      'schedule': 'You can schedule a session through our booking form. We offer flexible scheduling including evenings and weekends. Would you like to book a consultation?',
-      'appointment': 'Scheduling an appointment with Evolve Connection Coaching is easy! You can use our online booking system on this website, or contact us directly at evolveconnectioncoaching@gmail.com to find a time that works for you.',
-      'services': 'We offer Individual Coaching, Relationship Coaching, Life Transitions Coaching, Leadership Coaching, and Pre-Marital Coaching. We also offer a complimentary consultation to explore if coaching is right for you. Which service would you like to know more about?',
-      'location': 'We offer both virtual sessions and in-person sessions depending on your location and preference. Virtual sessions are conducted through a secure platform.',
-      'credentials': 'Danielle Woody is certified by the International Institute for Restorative Practices (IIRP) and has over a decade of experience in restorative practices, conflict resolution, and leadership development.',
-      'restorative': 'Restorative practices focus on building healthy connections, repairing harm, and fostering growth through honest dialogue and mutual accountability. Would you like to know how this applies to our coaching approach?',
-      'contact': 'You can contact us at evolveconnectioncoaching@gmail.com or through the contact form at the bottom of the page. How would you like to get in touch?',
-      'payment': 'We accept payment through PayPal and CashApp. Payment details are provided during the booking process.',
-      'cancel': 'Our cancellation policy allows for reschedules with at least 24 hours notice. If you need to cancel or reschedule, please email us as soon as possible.',
-      'who are you': 'I\'m the AI assistant for Evolve Connection Coaching, designed to help answer your questions about our services, provide information about coaching with Danielle, and help you connect with the right resources.',
-      'what is this': 'This is the website for Evolve Connection Coaching, a professional coaching service founded by Danielle Woody that focuses on restorative practices to transform relationships and communication.',
-      'company': 'Evolve Connection Coaching is a professional coaching service that offers restorative practices to transform relationships and communication. Our mission is to help you restore balance, clarity, and love in your life.',
-      'danielle': 'Danielle Woody (she/her) is the founder and lead coach at Evolve Connection Coaching. She has over a decade of experience in restorative practices, student accountability, conflict resolution, and leadership development. Danielle is certified by the International Institute for Restorative Practices (IIRP) and believes that healing begins with connection, accountability, and love.'
-    };
-
-    // Process user query and generate AI response
-    function generateResponse(query) {
-      query = query.toLowerCase();
-      
-      // First check for quick responses to common questions
-      for (const [key, response] of Object.entries(quickResponses)) {
-        if (query.includes(key)) {
-          return response;
-        }
-      }
-      
-      // Who questions - about Danielle
-      if ((query.includes('who') || query.includes('tell me about')) && 
-          (query.includes('danielle') || query.includes('founder') || query.includes('coach'))) {
-        const danielle = knowledgeBase.danielle;
-        return `${danielle.name} (${danielle.pronouns}) is the ${danielle.role}. ${danielle.experience} Her coaching philosophy is that "${danielle.philosophy}" She is certified by the ${danielle.certifications[0]} and believes in the values of ${danielle.values.join(', ')}.`;
-      }
-      
-      // What is questions - about the company
-      if ((query.includes('what') && query.includes('is')) && 
-          (query.includes('evolve') || query.includes('this') || query.includes('website') || query.includes('company'))) {
-        const company = knowledgeBase.company;
-        return `This is ${company.name}, a professional coaching service with the tagline "${company.tagline}" ${company.description} ${company.mission}`;
-      }
-      
-      if (query.includes('individual') || (query.includes('personal') && query.includes('coaching'))) {
-        const service = knowledgeBase.services[0];
-        return `Our ${service.name} is priced at ${service.price}.<br><br>This includes:<br> • ${service.features.join('<br> • ')}`;
-      }
-      
-      if (query.includes('relationship') || query.includes('couple') || (query.includes('marriage') && !query.includes('premarital'))) {
-        const service = knowledgeBase.services[1];
-        return `Our ${service.name} is priced at ${service.price}.<br><br>This includes:<br> • ${service.features.join('<br> • ')}`;
-      }
-      
-      if (query.includes('transition') || query.includes('change') || query.includes('life change')) {
-        const service = knowledgeBase.services[2];
-        return `Our ${service.name} is priced at ${service.price}.<br><br>This includes:<br> • ${service.features.join('<br> • ')}`;
-      }
-      
-      if (query.includes('consultation') || query.includes('consult') || query.includes('intro')) {
-        const service = knowledgeBase.services[3];
-        return `Our ${service.name} is priced at ${service.price}.<br><br>This includes:<br> • ${service.features.join('<br> • ')}`;
-      }
-      
-      if (query.includes('leadership') || query.includes('leader') || query.includes('executive') || query.includes('management')) {
-        const service = knowledgeBase.services[4];
-        return `Our ${service.name} is priced at ${service.price}.<br><br>This includes:<br> • ${service.features.join('<br> • ')}`;
-      }
-      
-      if (query.includes('premarital') || query.includes('pre-marital') || query.includes('before marriage') || query.includes('engagement')) {
-        const service = knowledgeBase.services[5];
-        return `Our ${service.name} is priced at ${service.price}.<br><br>This includes:<br> • ${service.features.join('<br> • ')}`;
-      }
-      
-      // Improved response about Danielle with expanded information
-      if ((query.includes('about') || query.includes('more')) && 
-          (query.includes('danielle') || query.includes('founder') || query.includes('coach'))) {
-        const danielle = knowledgeBase.danielle;
-        return `${danielle.name} (${danielle.pronouns}) is the founder of Evolve Connection Coaching. She brings ${danielle.experience} Danielle believes that "${danielle.philosophy}" She holds certifications from the ${danielle.certifications[0]} and centers her coaching approach around the values of ${danielle.values.join(', ')}.`;
-      }
-      
-      if (query.includes('all') && query.includes('service')) {
-        let response = 'Here are all our coaching services:<br><br>';
-        knowledgeBase.services.forEach(service => {
-          response += `<strong>${service.name}</strong>: ${service.price}<br>`;
-        });
-        response += '<br>Which one would you like to know more about?';
-        return response;
-      }
-      
-      // General information about the company
-      if ((query.includes('about') || query.includes('mission')) && 
-          (query.includes('company') || query.includes('evolve') || query.includes('coaching'))) {
-        return `${knowledgeBase.company.name} is focused on ${knowledgeBase.company.tagline} ${knowledgeBase.company.description} Our mission is: ${knowledgeBase.company.mission}`;
-      }
-      
-      // Default response when no specific match is found
-      return "I'd be happy to help with that. Could you provide a bit more detail about what you're looking for? You can ask about our services, pricing, booking process, or about Danielle's approach to coaching.";
-    }
-    
-    // Chat interface functions
-    function toggleChatWindow() {
-      const chatContainer = document.getElementById('chatContainer');
-      if (chatContainer.style.display === 'none' || !chatContainer.style.display) {
-        chatContainer.style.display = 'flex';
-        document.getElementById('chatInput').focus();
-      } else {
-        chatContainer.style.display = 'none';
-      }
-    }
-    
-    function closeChatWindow() {
-      document.getElementById('chatContainer').style.display = 'none';
-    }
-    
-    function sendChatMessage() {
-      const chatInput = document.getElementById('chatInput');
-      const message = chatInput.value.trim();
-      if (!message) return;
-      
-      // Add user message
-      const chatMessages = document.querySelector('.chat-messages');
-      const userMessageDiv = document.createElement('div');
-      userMessageDiv.classList.add('message', 'user');
-      userMessageDiv.innerHTML = `<p>${message}</p>`;
-      chatMessages.appendChild(userMessageDiv);
-      
-      // Clear input
-      chatInput.value = '';
-      
-      // Scroll to bottom
-      chatMessages.scrollTop = chatMessages.scrollHeight;
-      
-      // Show thinking indicator
-      const thinkingDiv = document.createElement('div');
-      thinkingDiv.classList.add('message', 'bot', 'thinking');
-      thinkingDiv.innerHTML = `<p>Thinking<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></p>`;
-      chatMessages.appendChild(thinkingDiv);
-      chatMessages.scrollTop = chatMessages.scrollHeight;
-      
-      // Generate AI response after a delay
-      setTimeout(function() {
-        // Remove thinking indicator
-        chatMessages.removeChild(thinkingDiv);
-        
-        // Generate and display response
-        const response = generateResponse(message);
-        const botMessageDiv = document.createElement('div');
-        botMessageDiv.classList.add('message', 'bot');
-        botMessageDiv.innerHTML = `<p>${response}</p>`;
-        chatMessages.appendChild(botMessageDiv);
-        
-        // Scroll to bottom again
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-      }, 1000);
-    }
-    
-    // Also set up Enter key for sending messages
-    document.getElementById('chatInput').addEventListener('keypress', function(e) {
-      if (e.key === 'Enter') {
-        sendChatMessage();
-      }
-    });
-  </script>
 
   <!-- Mobile Menu -->
   <div class="mobile-menu">
@@ -2658,68 +25,35 @@
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#testimonials">Testimonials</a>
+      <a href="#workshops">Workshops</a>
+      <a href="#shop">Shop</a>
       <a href="#faq">FAQ</a>
       <a href="#booking">Book Now</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
   <div class="overlay"></div>
-  
-  <script>
-    // Mobile menu functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-      const mobileMenu = document.querySelector('.mobile-menu');
-      const mobileMenuClose = document.querySelector('.mobile-menu-close');
-      const overlay = document.querySelector('.overlay');
-      
-      if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', function() {
-          mobileMenu.classList.add('active');
-          overlay.classList.add('active');
-          document.body.style.overflow = 'hidden';
-        });
-      }
-      
-      if (mobileMenuClose) {
-        mobileMenuClose.addEventListener('click', function() {
-          mobileMenu.classList.remove('active');
-          overlay.classList.remove('active');
-          document.body.style.overflow = '';
-        });
-      }
-      
-      if (overlay) {
-        overlay.addEventListener('click', function() {
-          mobileMenu.classList.remove('active');
-          overlay.classList.remove('active');
-          document.body.style.overflow = '';
-        });
-      }
-      
-      // Close mobile menu when clicking on a link
-      const mobileMenuLinks = document.querySelectorAll('.mobile-menu-links a');
-      mobileMenuLinks.forEach(link => {
-        link.addEventListener('click', function() {
-          mobileMenu.classList.remove('active');
-          overlay.classList.remove('active');
-          document.body.style.overflow = '';
-        });
-      });
-    });
-  </script>
 
 <!-- Header -->
 <header class="header">
   <div class="container">
     <nav class="nav-container">
       <a href="/" class="logo"> 
-        <img src="https://i.ibb.co/N5Yj5Zs/logo2.png" alt="Evolve Logo" style="height: 80px; width: auto; object-fit: contain; vertical-align: middle; max-height: 70px;"> 
+        <img src="Adobe Express - file (1).png" alt="Evolve Logo" style="width: 80px; height: auto;"> 
+      
       </a>
-      <button class="mobile-menu-btn" aria-label="Open menu"><i class="fas fa-bars"></i></button>
-    </nav>
-  </div>
-</header>
+
+        <div class="nav-links">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#testimonials" class="nav-link">Testimonials</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <a href="#booking" class="client-portal">Book Now</a>
+        <button class="mobile-menu-btn" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+      </nav>
+    </div>
+  </header>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -2732,7 +66,7 @@
           </div>
           <div class="hero-description">
             <p>Deep, meaningful connections are the foundation of growth, healing, and transformation. Let's build a path forward together.</p>
-            <a href="#booking" class="hero-cta">Book a Consultation</a>
+            <a href="#booking" class="hero-cta">Book a Free Consultation</a>
           </div>
         </div>
       </div>
@@ -2764,13 +98,6 @@
             <span class="value-tag">Connection</span>
           </div>
           
-          <div class="certifications" style="margin-top: 25px; margin-bottom: 25px;">
-            <h3 style="font-size: 1.2rem; margin-bottom: 15px;">Professional Certifications</h3>
-            <div style="display: flex; align-items: center; gap: 20px;">
-              <img src="https://i.ibb.co/MkLRHg5V/Certified-Life-Coach-Logo.jpg" alt="Certified Life Coach" style="max-width: 180px; height: auto;">
-            </div>
-          </div>
-          
           <a href="#booking" class="btn">Work With Me</a>
         </div>
         <div class="about-image" data-aos="fade-left">
@@ -2784,307 +111,165 @@
   <section id="services" class="services section">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <h2>Ways to work together</h2>
-        <p>At Evolve Connection Coaching I believe that growth, healing, and connection happen through meaningful partnership. Whether you're seeing to strengthen personal relationships, navigate life transitions or lead with great authenticity, Evolve Coaching pathways offer restorative tools and guided support tailored to your journey.</p>
+        <h2>What We Offer</h2>
+        <p>Discover the transformative power of restorative coaching for your relationships and personal growth.</p>
       </div>
-      
-      <!-- Personal Growth Section -->
-      <div class="service-category" id="personal-growth">
-        <h2 class="category-title" data-aos="fade-up">Personal Growth &amp; Self-Discovery</h2>
-        <div class="services-grid">
-          <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card-content">
-              <h3>Individual Coaching</h3>
-              <p class="service-price">$100 per session</p>
-              <div class="service-features">
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Cultivate self-awareness &amp; emotional resilience</span>
-                </div>
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Identify patterns that no longer serve you</span>
-                </div>
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Build confidence &amp; set intentional goals</span>
-                </div>
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Create lasting transformation through restorative practice</span>
-                </div>
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card-content">
+            <h3>Individual Coaching</h3>
+            <p class="service-price">$100 - $200 per session</p>
+            <div class="service-features">
+              <div class="service-feature">
+                <i class="fas fa-check"></i>
+                <span>Self-reflection & emotional awareness</span>
               </div>
-              <a href="#booking" class="btn">Book a Session</a>
+              <div class="service-feature">
+                <i class="fas fa-check"></i>
+                <span>Identify patterns that no longer serve you</span>
+              </div>
+              <div class="service-feature">
+                <i class="fas fa-check"></i>
+                <span>Cultivate self-love and confidence</span>
+              </div>
+              <div class="service-feature">
+                <i class="fas fa-check"></i>
+                <span>Set intentional goals for transformation</span>
+              </div>
             </div>
+            <a href="#booking" class="btn">Book a Session</a>
           </div>
-          
-          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card-content">
-              <h3>Life Transitions Coaching</h3>
-              <p class="service-price">$100 per session</p>
-              <div class="service-features">
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Find clarity during change or uncertainty</span>
-                </div>
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Embrace new beginnings with intention</span>
-                </div>
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Heal from past experiences</span>
-                </div>
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Design a roadmap for your next chapter</span>
-                </div>
+        </div>
+        
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card-content">
+            <h3>Relationship Coaching</h3>
+            <p class="service-price">$120 - $250 per session</p>
+            <div class="service-features">
+              <div class="service-feature">
+                <i class="fas fa-check"></i>
+                <span>Develop healthier communication skills</span>
               </div>
-              <a href="#booking" class="btn">Book a Session</a>
+              <div class="service-feature">
+                <i class="fas fa-check"></i>
+                <span>Navigate conflict with honesty and empathy</span>
+              </div>
+              <div class="service-feature">
+                <i class="fas fa-check"></i>
+                <span>Repair and restore relationships after harm</span>
+              </div>
+              <div class="service-feature">
+                <i class="fas fa-check"></i>
+                <span>Build deeper emotional connections and trust</span>
+              </div>
             </div>
+            <a href="#booking" class="btn">Book a Session</a>
+          </div>
+        </div>
+        
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-card-content">
+            <h3>Life Transitions Coaching</h3>
+            <p class="service-price">$120 - $250 per session</p>
+            <div class="service-features">
+              <div class="service-feature">
+                <i class="fas fa-check"></i>
+                <span>Find clarity in uncertain times</span>
+              </div>
+              <div class="service-feature">
+                <i class="fas fa-check"></i>
+                <span>Embrace new beginnings with intention</span>
+              </div>
+              <div class="service-feature">
+                <i class="fas fa-check"></i>
+                <span>Process and heal from past experiences</span>
+              </div>
+              <div class="service-feature">
+                <i class="fas fa-check"></i>
+                <span>Develop a roadmap for your next chapter</span>
+              </div>
+            </div>
+            <a href="#booking" class="btn">Book a Session</a>
           </div>
         </div>
       </div>
       
-      <!-- Relationship Section -->
-      <div class="service-category" id="relationships">
-        <h2 class="category-title" data-aos="fade-up">Connection, Repair &amp; Growth</h2>
-        <div class="services-grid">
-          <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card-content">
-              <h3>Relationship Coaching</h3>
-              <p class="service-price">$150 per session</p>
-              <div class="service-features">
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Strengthen communication &amp; rebuild trust</span>
-                </div>
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Navigate conflict with empathy &amp; honesty</span>
-                </div>
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Repair harm and restore emotional safety</span>
-                </div>
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Deepen intimacy and shared understanding</span>
-                </div>
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card-content">
+            <h3>Leadership Coaching</h3>
+            <p class="service-price">$150 - $300 per session</p>
+            <div class="service-features">
+              <div class="service-feature">
+                <i class="fas fa-check"></i>
+                <span>Lead with integrity, empathy, and accountability</span>
               </div>
-              <a href="#booking" class="btn">Book a Session</a>
-            </div>
-          </div>
-          
-          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card-content">
-              <h3>Pre-Marital Coaching</h3>
-              <p class="service-price">Starting at $600 for 4 sessions</p>
-              <div class="service-features">
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Clarify shared values &amp; expectations</span>
-                </div>
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Practice restorative communication</span>
-                </div>
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Address family, cultural, and personal dynamics</span>
-                </div>
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Build a strong foundation for partnership</span>
-                </div>
+              <div class="service-feature">
+                <i class="fas fa-check"></i>
+                <span>Strengthen emotional intelligence</span>
               </div>
-              <a href="#booking" class="btn">Book a Package</a>
+              <div class="service-feature">
+                <i class="fas fa-check"></i>
+                <span>Foster trust and collaboration in teams</span>
+              </div>
+              <div class="service-feature">
+                <i class="fas fa-check"></i>
+                <span>Navigate difficult conversations with confidence</span>
+              </div>
             </div>
+            <a href="#booking" class="btn">Book a Session</a>
           </div>
         </div>
-      </div>
-      
-      <!-- Professional Development Section -->
-      <div class="service-category" id="professional">
-        <h2 class="category-title" data-aos="fade-up">Integrity, Influence &amp; Impact</h2>
-        <div class="services-grid">
-          <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card-content">
-              <h3>Restorative Leadership Coaching</h3>
-              <p class="service-price">$300 per session</p>
-              <div class="service-features">
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Lead with empathy, authenticity, and accountability</span>
-                </div>
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Strengthen emotional intelligence and deepen self-awareness</span>
-                </div>
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Cultivate a leadership presence that inspires growth</span>
-                </div>
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Build a restorative team culture rooted in trust</span>
-                </div>
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Navigate tough conversations with clarity and care</span>
-                </div>
+        
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card-content">
+            <h3>Pre-Marital Coaching</h3>
+            <p class="service-price">Starting at $450 (4 sessions)</p>
+            <div class="service-features">
+              <div class="service-feature">
+                <i class="fas fa-check"></i>
+                <span>Communication & active listening</span>
               </div>
-              <a href="#booking" class="btn">Book a Session</a>
-            </div>
-          </div>
-          
-          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card-content">
-              <h3>Professional Identity &amp; Job Search Coaching</h3>
-              <p class="service-price">$300 per session</p>
-              <div class="service-features">
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Align your career journey with your values</span>
-                </div>
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Get expert guidance on resumes and applications</span>
-                </div>
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Practice interview questions aligned to your experiences</span>
-                </div>
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Clarify your professional story and leadership identity</span>
-                </div>
+              <div class="service-feature">
+                <i class="fas fa-check"></i>
+                <span>Conflict resolution & restorative dialogue</span>
               </div>
-              <a href="#booking" class="btn">Book a Session</a>
+              <div class="service-feature">
+                <i class="fas fa-check"></i>
+                <span>Values & relationship expectations</span>
+              </div>
+              <div class="service-feature">
+                <i class="fas fa-check"></i>
+                <span>Family & cultural dynamics</span>
+              </div>
             </div>
+            <a href="#booking" class="btn">Book a Package</a>
           </div>
         </div>
-      </div>
-      
-      <!-- Getting Started Section -->
-      <div class="service-category" id="getting-started">
-        <h2 class="category-title" data-aos="fade-up">Start Here</h2>
-        <div class="services-grid">
-          <div class="service-card" data-aos="fade-up" data-aos-delay="50">
-            <div class="service-card-content">
-              <h3>Complimentary Consultation</h3>
-           
-              <div class="service-features">
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>No pressure conversation to determine fit</span>
-                </div>
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Explore your goals and coaching needs</span>
-                </div>
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Ask questions about the coaching process</span>
-                </div>
-                <div class="service-feature">
-                  <i class="fas fa-check"></i>
-                  <span>Learn how restorative coaching can support you</span>
-                </div>
+        
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-card-content">
+            <h3>Wedding Officiating</h3>
+            <p class="service-price">$250 - $500</p>
+            <div class="service-features">
+              <div class="service-feature">
+                <i class="fas fa-check"></i>
+                <span>Personalized ceremony script</span>
               </div>
-              <a href="#booking" class="btn">Schedule a Call</a>
+              <div class="service-feature">
+                <i class="fas fa-check"></i>
+                <span>Assistance with crafting meaningful vows</span>
+              </div>
+              <div class="service-feature">
+                <i class="fas fa-check"></i>
+                <span>Professional officiation on your wedding day</span>
+              </div>
+              <div class="service-feature">
+                <i class="fas fa-check"></i>
+                <span>Marriage license signing & documentation</span>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Customized Coaching Bundles Section -->
-      <div class="service-category" id="bundles">
-        <h2 class="category-title" data-aos="fade-up">Customized Coaching Bundles</h2>
-        <div class="services-grid">
-          <div class="service-card" data-aos="fade-up" data-aos-delay="50" style="grid-column: 1 / -1; max-width: 800px; margin: 0 auto;">
-            <div class="service-card-content">
-              <h3>Deeper Support, Lasting Growth</h3>
-              <p>Looking for deeper transformation or ongoing support? Evolve | Connection Coaching offers flexible 3–6 month coaching bundles that are personalized to meet your goals, schedule, and pace of growth. Whether you're navigating a relationship shift, stepping into leadership, or rediscovering yourself, coaching bundles allow us to work together over time with intentional structure and room for reflection.</p>
-              
-              <div style="margin-top: 20px; margin-bottom: 20px;">
-                <h4 style="color: var(--primary-color); margin-bottom: 15px;">Bundle Benefits:</h4>
-                <div class="service-features">
-                  <div class="service-feature">
-                    <i class="fas fa-check"></i>
-                    <span>Personalized session roadmap based on your goals</span>
-                  </div>
-                  <div class="service-feature">
-                    <i class="fas fa-check"></i>
-                    <span>Priority scheduling and consistent session rhythm</span>
-                  </div>
-                  <div class="service-feature">
-                    <i class="fas fa-check"></i>
-                    <span>Optional support between sessions (via email or short check-ins)</span>
-                  </div>
-                  <div class="service-feature">
-                    <i class="fas fa-check"></i>
-                    <span>Discounted rate when booking a full bundle</span>
-                  </div>
-                  <div class="service-feature">
-                    <i class="fas fa-check"></i>
-                    <span>Deepened trust, insight, and accountability through extended partnership</span>
-                  </div>
-                </div>
-              </div>
-              
-              <a href="#booking" class="btn">Book a consultation</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Workshops Section -->
-      <div class="service-category" id="group-services">
-        <h2 class="category-title" data-aos="fade-up">Workshops, Trainings &amp; Retreats</h2>
-        <div class="services-grid">
-          <div class="service-card" data-aos="fade-up" data-aos-delay="50" style="grid-column: 1 / -1; max-width: 800px; margin: 0 auto;">
-            <div class="service-card-content">
-              <h3>Restorative Learning in Community</h3>
-              <p>Looking to bring restorative practices to your team, organization, or event? Evolve | Connection Coaching offers engaging, reflective, and transformational group experiences designed to deepen connection, improve communication, and support authentic growth.</p>
-              
-              <p>These offerings are ideal for higher education spaces, leadership teams, DEI initiatives, couples' retreats, or community groups looking to infuse restorative values into their work and relationships.</p>
-              
-              <div style="margin-top: 20px; margin-bottom: 15px;">
-                <h4 style="color: var(--primary-color); margin-bottom: 15px;">Available Formats:</h4>
-                <div class="service-features">
-                  <div class="service-feature">
-                    <i class="fas fa-check"></i>
-                    <span><strong>Interactive Workshops</strong> — 60–90 minute sessions focused on themes like restorative communication, accountability, emotional intelligence, and conflict resolution</span>
-                  </div>
-                  <div class="service-feature">
-                    <i class="fas fa-check"></i>
-                    <span><strong>Speaking Engagements</strong> — Dynamic, thoughtful talks customized for your audience, from student affairs to leadership development</span>
-                  </div>
-                  <div class="service-feature">
-                    <i class="fas fa-check"></i>
-                    <span><strong>Group Trainings</strong> — Half-day or full-day intensives designed for teams and organizations seeking to embed restorative practices into culture and communication</span>
-                  </div>
-                  <div class="service-feature">
-                    <i class="fas fa-check"></i>
-                    <span><strong>Retreat Facilitation</strong> — Multi-session experiences to pause, reconnect, and evolve individually and collectively</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div style="margin-top: 20px; margin-bottom: 20px;">
-                <h4 style="color: var(--primary-color); margin-bottom: 15px;">Topics can include:</h4>
-                <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
-                  <span class="value-tag">Restorative Leadership in Practice</span>
-                  <span class="value-tag">Healing-Centered Accountability</span>
-                  <span class="value-tag">Communication That Builds Trust</span>
-                  <span class="value-tag">Building a Culture of Connection</span>
-                  <span class="value-tag">Leading with Empathy in Challenging Times</span>
-                </div>
-              </div>
-              
-              <a href="#contact" class="btn">Reach out to discuss options</a>
-            </div>
+            <a href="#booking" class="btn">Learn More</a>
           </div>
         </div>
       </div>
@@ -3105,7 +290,7 @@
           </div>
           <div class="testimonial-author">
             <div>
-              <strong>Michael H</strong>
+              <strong>Sarah & Michael</strong>
               <div>Relationship Coaching</div>
             </div>
           </div>
@@ -3117,7 +302,7 @@
           </div>
           <div class="testimonial-author">
             <div>
-              <strong>Amira B</strong>
+              <strong>James K.</strong>
               <div>Leadership Coaching</div>
             </div>
           </div>
@@ -3129,7 +314,7 @@
           </div>
           <div class="testimonial-author">
             <div>
-              <strong>Adebola B</strong>
+              <strong>Rachel T.</strong>
               <div>Life Transitions Coaching</div>
             </div>
           </div>
@@ -3148,10 +333,35 @@
       <div class="workshop-container">
         <div class="workshop-card" data-aos="fade-up">
           <div class="workshop-card-content">
-            <h3>Workshops Coming Soon</h3>
-            <p>We're currently developing new workshops and events. Check back soon for upcoming opportunities to learn and grow with us!</p>
-       
-            <a href="#booking" class="btn">Contact for More Info</a>
+            <span class="workshop-date">April 15, 2025 | 9:00 AM - 4:00 PM</span>
+            <h3>Restorative Communication Workshop</h3>
+            <p>A one-day immersive workshop focused on building effective communication skills through restorative practices.</p>
+            <p><strong>What you'll learn:</strong></p>
+            <ul>
+              <li>Non-judgmental listening techniques</li>
+              <li>"I feel" statements and constructive dialogue</li>
+              <li>Conflict resolution strategies</li>
+              <li>Building healthier, more open lines of communication</li>
+            </ul>
+            <p><strong>Location:</strong> Virtual via Zoom</p>
+            <a href="#booking" class="btn">Register Now</a>
+          </div>
+        </div>
+        
+        <div class="workshop-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="workshop-card-content">
+            <span class="workshop-date">May 20-22, 2025 | Weekend Retreat</span>
+            <h3>Healing & Empowerment Retreat</h3>
+            <p>An immersive weekend retreat for individuals seeking personal growth and restoration.</p>
+            <p><strong>Activities include:</strong></p>
+            <ul>
+              <li>Restorative circles for sharing and reflection</li>
+              <li>Guided meditations and mindfulness practices</li>
+              <li>Workshops on forgiveness and embracing self-love</li>
+              <li>Building meaningful connections with like-minded individuals</li>
+            </ul>
+            <p><strong>Location:</strong> Serenity Retreat Center, Maryland</p>
+            <a href="#booking" class="btn">Learn More</a>
           </div>
         </div>
       </div>
@@ -3214,31 +424,6 @@
             </div>
           </div>
         </div>
-        
-        <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
-          <div class="accordion-header">
-            <h3>What happens after I book a session?</h3>
-            <i class="fas fa-plus"></i>
-          </div>
-          <div class="accordion-content">
-            <div class="accordion-content-inner">
-              <p>After booking your session, you will receive a confirmation email with all the necessary details and any pre-session materials. For any questions or concerns, we'll follow up via email to ensure you have everything you need before your appointment.</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="accordion-item" data-aos="fade-up" data-aos-delay="500">
-          <div class="accordion-header">
-            <h3>What are Restorative Practices?</h3>
-            <i class="fas fa-plus"></i>
-          </div>
-          <div class="accordion-content">
-            <div class="accordion-content-inner">
-              <p>Restorative Practices is an approach rooted in the belief that relationships are central to building healthy communities and that when harm occurs, healing and learning happen best when those relationships are repaired instead of punishment or isolation.</p>
-              <p>At its core, restorative practices focus on strengthening relationships, fostering accountability, and creating environments where individuals feel seen, heard, and respected. It is both proactive (building strong connections) and responsive (addressing harm or conflict in ways that restore trust and community).</p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -3254,179 +439,66 @@
         <div class="booking-info" data-aos="fade-right">
           <h3>How It Works</h3>
           <ul>
-            <li><i class="fas fa-check"></i> <span>Choose your preferred booking method below - form or calendar.</span></li>
+            <li><i class="fas fa-check"></i> <span>Complete the booking form with your preferred session type and availability.</span></li>
             <li><i class="fas fa-check"></i> <span>Receive confirmation and pre-session materials via email.</span></li>
             <li><i class="fas fa-check"></i> <span>Attend your session via our secure virtual platform or in-person.</span></li>
             <li><i class="fas fa-check"></i> <span>Receive follow-up materials and next steps after your session.</span></li>
           </ul>
           
           <div class="pricing-box">
-     <h4>Complimentary Consultation</h4>
-<p>Curious about coaching and how we would work together? Schedule a complimentary consultation to explore your goals, ask questions, and experience the restorative approach firsthand. This no pressure conversation is an opportunity for you to share your story, learn about the coaching process, and see if Evolve Connection Coaching is the right fit for your journey.</p>
-          </div>
-          
-          <div class="pricing-box">
-            <h4>Fee Transparency &amp; Flexibility</h4>
-            <p>I believe in providing clear, transparent pricing while making my services accessible. Start with a complimentary consultation to explore if we're a good fit. If you have questions about fees or need a customized payment plan, I'm happy to discuss flexible options.</p>
-            <div class="pricing-item">
-              <span>Consultation</span>
-              <span>Complimentary</span>
-            </div>
+            <h4>Fee Transparency & Flexibility</h4>
+            <p>I believe in providing clear, transparent pricing while making my services accessible. If you have questions about fees or need a customized payment plan, I'm happy to discuss flexible options.</p>
             <div class="pricing-item">
               <span>Individual Coaching</span>
-              <span>$100</span>
-            </div>
-            <div class="pricing-item">
-              <span>Life Transitions Coaching</span>
-              <span>$100</span>
+              <span>$100 - $200</span>
             </div>
             <div class="pricing-item">
               <span>Relationship Coaching</span>
-              <span>$150</span>
+              <span>$120 - $250</span>
             </div>
             <div class="pricing-item">
-              <span>Restorative Leadership Coaching</span>
-              <span>$300</span>
-            </div>
-            <div class="pricing-item">
-              <span>Professional Identity &amp; Job Search</span>
-              <span>$300</span>
+              <span>Leadership Coaching</span>
+              <span>$150 - $300</span>
             </div>
             <div class="pricing-item">
               <span>Pre-Marital Package (4 sessions)</span>
-              <span>$600</span>
+              <span>$450</span>
             </div>
           </div>
         </div>
         
         <div class="booking-form" data-aos="fade-left">
-          <div class="booking-tabs">
-            <button class="booking-tab active" onclick="switchBookingTab('form')">Booking Form</button>
-            <button class="booking-tab" onclick="switchBookingTab('calendar')">Calendar Booking</button>
-          </div>
-          
-          <div id="booking-form-container" class="booking-content active">
-            <form action="#" method="POST">
-              <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" required="" autocomplete="name">
-              </div>
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required="" autocomplete="email">
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" autocomplete="tel">
-              </div>
-              <div class="form-group">
-                <label for="session-type">Session Type</label>
-                <select id="session-type" name="session-type" required="">
-                  <option value="" selected="" disabled="">Select a Session Type</option>
-                  <option value="consultation">Complimentary Consultation</option>
-                  <option value="individual">Individual Coaching</option>
-                  <option value="relationship">Relationship Coaching</option>
-                  <option value="transitions">Life Transitions Coaching</option>
-                  <option value="leadership">Leadership Coaching</option>
-                  <option value="premarital">Pre-Marital Coaching</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="message">Tell us about your goals</label>
-                <textarea id="message" name="message" required=""></textarea>
-              </div>
-              <div class="form-group">
-                <label for="payment-method">Payment Method</label>
-                <select id="payment-method" name="payment-method" required="">
-                  <option value="" selected="" disabled="">Select Payment Method</option>
-                  <option value="paypal">PayPal</option>
-                  <option value="cashapp">CashApp</option>
-                  <option value="venmo">Venmo</option>
-                  <option value="bank">Bank Transfer</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              
-              <div class="form-group payment-verification">
-                <label for="payment-verification">Payment Verification</label>
-                <p class="verification-note" style="font-size: 0.9rem; margin-bottom: 10px; color: #666;">Please make your payment before submitting this form. Enter your payment details below for verification.</p>
-                <input type="text" id="payment-verification" name="payment-verification" placeholder="Transaction ID, confirmation number, or reference" required="">
-              </div>
-              
-              <div class="form-group" id="paypal-email-field" style="display: none;">
-                <label for="paypal-user-email">Your PayPal Email (for payment verification)</label>
-                <input type="email" id="paypal-user-email" name="paypal-user-email">
-              </div>
-              
-              <div class="form-group" id="payment-username-field" style="display: none;">
-                <label for="payment-username" id="payment-username-label">Your Username</label>
-                <input type="text" id="payment-username" name="payment-username">
-              </div>
-              
-              <div id="paypal-button-container" style="margin-bottom: 15px; display: none;"></div>
-              <button type="submit" class="btn btn-full">Schedule Consultation</button>
-            </form>
-          </div>
-          
-          <div id="booking-calendar-container" class="booking-content">
-            <!-- Payment Verification Box -->
-            <div class="payment-verification-box" style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 20px; margin-bottom: 20px;">
-              <h4 style="color: #8a56b5; margin-top: 0;">Payment Verification Required</h4>
-              <p>Before your appointment can be confirmed, payment verification is required:</p>
-              
-              <form id="calendly-payment-form">
-                <div class="form-group">
-                  <label for="calendly-payment-method">Payment Method Used</label>
-                  <select id="calendly-payment-method" name="calendly-payment-method" required="">
-                    <option value="" selected="" disabled="">Select Payment Method</option>
-                    <option value="paypal">PayPal</option>
-                    <option value="cashapp">CashApp</option>
-                    <option value="venmo">Venmo</option>
-                    <option value="bank">Bank Transfer</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                
-                <div class="form-group">
-                  <label for="calendly-payment-id" id="payment-method-label">Enter your payment username</label>
-                  <input type="text" id="calendly-payment-id" name="calendly-payment-id" placeholder="Enter your username for the selected payment method" required="">
-                </div>
-                
-                <div class="form-group">
-                  <button type="button" id="verify-payment-btn" class="btn" style="margin-top: 10px;">Verify Payment</button>
-                </div>
-              </form>
-              
-              <div id="payment-verification-success" style="display: none; color: green; margin-top: 15px;">
-                <i class="fas fa-check-circle"></i> Payment verified! You can now book your appointment below.
-              </div>
-              
-              <div id="payment-verification-instructions" style="margin-top: 15px; font-size: 0.9rem; color: #666;">
-                <p><strong>Note:</strong> If you haven't made a payment yet, please:</p>
-                <ol style="margin-left: 20px;">
-                  <li>Make your payment via your selected payment method</li>
-                  <li>For PayPal: Send to daniellempettigrew@gmail.com</li>
-                  <li>For CashApp: Send to $EvolveCoaching</li>
-                  <li>For Venmo: Use @EvolveCoaching</li>
-                  <li>For other methods: Contact evolveconnectioncoaching@gmail.com</li>
-                  <li>Enter your username for the payment method you used</li>
-                </ol>
-              </div>
+          <form action="#" method="POST">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required autocomplete="name">
             </div>
-            
-            <!-- Calendly inline widget (initially hidden) -->
-            <div id="calendly-widget-container" style="display: none;">
-              <div class="calendly-inline-widget" data-url="https://calendly.com/evolveconnectioncoaching" style="position: relative;min-width:320px;height:700px;" data-processed="true">
-                <div class="calendly-spinner">
-                  <div class="calendly-bounce1"></div>
-                  <div class="calendly-bounce2"></div>
-                  <div class="calendly-bounce3"></div>
-                </div>
-                <iframe src="https://calendly.com/evolveconnectioncoaching?embed_domain=bc98df7f-269d-448a-b4e7-002ca4d1d77e--1747713600--f3068d48.preview.yourware.so&amp;embed_type=Inline" width="100%" height="100%" frameborder="0" title="Select a Date &amp; Time - Calendly"></iframe>
-              </div>
-              <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async=""></script>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required autocomplete="email">
             </div>
-          </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="session-type">Session Type</label>
+              <select id="session-type" name="session-type" required>
+                <option value="" selected disabled>Select a Session Type</option>
+                <option value="individual">Individual Coaching</option>
+                <option value="relationship">Relationship Coaching</option>
+                <option value="transitions">Life Transitions Coaching</option>
+                <option value="leadership">Leadership Coaching</option>
+                <option value="premarital">Pre-Marital Coaching</option>
+                <option value="wedding">Wedding Officiating</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Tell us about your goals</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-full">Schedule Consultation</button>
+          </form>
         </div>
       </div>
     </div>
@@ -3439,7 +511,7 @@
         <h2>Join Our Community</h2>
         <p>Subscribe to our newsletter for relationship tips, workshop announcements, and exclusive content.</p>
         <form class="newsletter-form">
-          <input type="email" placeholder="Your email address" required="">
+          <input type="email" placeholder="Your email address" required>
           <button type="submit">Subscribe</button>
         </form>
       </div>
@@ -3460,7 +532,7 @@
             <i class="fas fa-envelope"></i>
             <div>
               <p><strong>Email</strong></p>
-              <p>evolveconnectioncoaching@gmail.com</p>
+              <p>danielle@evolveconnectioncoaching.com</p>
             </div>
           </div>
           <div class="contact-method">
@@ -3471,30 +543,38 @@
             </div>
           </div>
           <div class="contact-method">
-       
-           
+            <i class="fas fa-clock"></i>
+            <div>
+              <p><strong>Office Hours</strong></p>
+              <p>Monday-Friday: 9AM-6PM</p>
+            </div>
           </div>
           
-      
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+          </div>
         </div>
         
         <div class="contact-form" data-aos="fade-left">
           <form action="#" method="POST">
             <div class="form-group">
               <label for="contact-name">Name</label>
-              <input type="text" id="contact-name" name="contact-name" required="">
+              <input type="text" id="contact-name" name="contact-name" required>
             </div>
             <div class="form-group">
               <label for="contact-email">Email</label>
-              <input type="email" id="contact-email" name="contact-email" required="">
+              <input type="email" id="contact-email" name="contact-email" required>
             </div>
             <div class="form-group">
               <label for="contact-subject">Subject</label>
-              <input type="text" id="contact-subject" name="contact-subject" required="">
+              <input type="text" id="contact-subject" name="contact-subject" required>
             </div>
             <div class="form-group">
               <label for="contact-message">Message</label>
-              <textarea id="contact-message" name="contact-message" required=""></textarea>
+              <textarea id="contact-message" name="contact-message" required></textarea>
             </div>
             <button type="submit" class="btn btn-full">Send Message</button>
           </form>
@@ -3511,7 +591,7 @@
           <h3>Evolve | Connection Coaching</h3>
           <p>At Evolve | Connection Coaching, we believe that deep, meaningful connections are the foundation of growth, healing, and transformation.</p>
           <div class="footer-logo">
-            <img src="https://i.ibb.co/MkLRHg5V/Certified-Life-Coach-Logo.jpg" alt="Certified Life Coach" class="certification-badge" style="max-width: 150px; margin-top: 15px;">
+       
           </div>
         </div>
         <div class="footer-links">
@@ -3528,18 +608,18 @@
         <div class="footer-links">
           <h4>Services</h4>
           <ul>
-            <li><a href="#personal-growth">Individual Coaching</a></li>
-            <li><a href="#relationships">Relationship Coaching</a></li>
-            <li><a href="#professional">Leadership Coaching</a></li>
-            <li><a href="#relationships">Pre-Marital Coaching</a></li>
-            <li><a href="#getting-started">Consultation</a></li>
+            <li><a href="#services">Individual Coaching</a></li>
+            <li><a href="#services">Relationship Coaching</a></li>
+            <li><a href="#services">Leadership Coaching</a></li>
+            <li><a href="#services">Pre-Marital Coaching</a></li>
+            <li><a href="#services">Wedding Officiating</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2025 Evolve | Connection Coaching LLC. All rights reserved.</p>
+        <p>&copy; 2025 Evolve | Connection Coaching LLC. All rights reserved.</p>
       </div>
     </div>
   </footer>
-
-</body></html>
+</body>
+</html>        
